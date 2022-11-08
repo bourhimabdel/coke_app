@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#9E9494</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NotificationBar" parent="Theme.AppCompat.DayNight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/f1</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/background_snack</item>
+    </style>
+
+    <style name="AppTheme.NotificationBar2" parent="Theme.AppCompat.DayNight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/f2</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/background_snack</item>
+    </style>
+
+    <style name="AppTheme.NotificationBar3" parent="Theme.AppCompat.DayNight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/f3</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/background_snack</item>
+    </style>
+
+    <style name="AppTheme.NotificationBar4" parent="Theme.AppCompat.DayNight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/f4</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/background_snack</item>
+    </style>
+
+    <style name="AppTheme.NotificationBar5" parent="Theme.AppCompat.DayNight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/f5</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/background_snack</item>
+    </style>
+
+
+    <style name="AppSearchView" parent="Widget.AppCompat.SearchView" >
+        <item name="android:textSize">@dimen/dimens_45px</item>
+    </style>
+
+    <style name="Splash_screen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">#272727</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">#272727</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+    </style>
+
+
+
+</resources>

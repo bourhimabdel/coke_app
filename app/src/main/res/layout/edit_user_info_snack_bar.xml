@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:layoutDirection="ltr">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/background"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dimens_220px"
+            >
+
+    <!--           IMAGE             -->
+
+    <ImageButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="@dimen/dimens_130px"
+        android:layout_height="@dimen/dimens_130px"
+        android:background="@drawable/btn_selector_delet"
+        android:src="@drawable/cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dimens_18px"
+        android:layout_marginLeft="@dimen/dimens_18px"
+        />
+    <TextView
+        android:id="@+id/title_image_recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dimen_100_px"
+        android:layout_marginRight="@dimen/dimens_55px"
+
+
+        app:layout_constraintVertical_bias="0.24"
+        android:text="صورة شخصية :"
+        android:textColor="@color/color_text_login_and_cadre"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimens_45px"
+        />
+
+    <View
+        android:layout_height="@dimen/dimens_2px"
+        android:background="@color/color_text_login_and_cadre"
+        app:layout_constraintTop_toBottomOf="@id/title_image_recipe"
+        app:layout_constraintStart_toStartOf="@id/title_image_recipe"
+        app:layout_constraintEnd_toEndOf="@id/title_image_recipe"
+        android:layout_width="0dp" />
+
+    <com.joooonho.SelectableRoundedImageView
+        android:id="@+id/image_image_recipe"
+        android:layout_width="@dimen/dimens_420px"
+        android:layout_height="@dimen/dimens_420px"
+        app:layout_constraintTop_toBottomOf="@id/title_image_recipe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dimens_45px"
+        app:sriv_oval="true"
+        android:background="@drawable/btn_selector_select_image"
+        />
+
+
+
+
+    <!--           TITLE             -->
+    <TextView
+        android:id="@+id/title_title_recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/image_image_recipe"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dimens_45px"
+        android:layout_marginRight="@dimen/dimens_55px"
+
+        app:layout_constraintVertical_bias="0.24"
+        android:text="اسم او لقب :"
+        android:textColor="@color/color_text_login_and_cadre"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimens_45px"
+        />
+
+    <ImageView
+        android:id="@+id/check_title"
+        android:layout_width="@dimen/dimens_55px"
+        android:layout_height="@dimen/dimens_55px"
+        app:layout_constraintEnd_toStartOf="@id/title_title_recipe"
+        app:layout_constraintTop_toTopOf="@id/title_title_recipe"
+        app:layout_constraintBottom_toBottomOf="@id/title_title_recipe"
+        android:background="@drawable/not_complet"
+        android:layout_marginEnd="@dimen/demens_23px"
+        android:layout_marginRight="@dimen/demens_23px" />
+    <View
+        android:layout_height="@dimen/dimens_2px"
+        android:background="@color/color_text_login_and_cadre"
+        app:layout_constraintTop_toBottomOf="@id/title_title_recipe"
+        app:layout_constraintStart_toStartOf="@id/title_title_recipe"
+        app:layout_constraintEnd_toEndOf="@id/title_title_recipe"
+        android:layout_width="0dp" />
+
+    <EditText
+        android:id="@+id/input_title"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dimens_130px"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_title_recipe"
+        android:layout_marginTop="@dimen/dimens_45px"
+
+        android:background="@drawable/edit_text_before_write"
+        android:hint="مثلا   'الطباخة الماهرة'"
+
+        android:paddingRight="@dimen/dimens_45px"
+        android:paddingBottom="@dimen/dimens_45px"
+        android:paddingTop="@dimen/dimens_70px"
+        android:paddingLeft="@dimen/dimens_45px"
+
+        android:textColor="@color/color_text_login_and_cadre"
+        android:gravity="right|center_vertical"
+        android:textSize="@dimen/dimens_45px"
+
+        android:maxLength="25"
+        android:inputType="text"
+
+
+        />
+    <TextView
+        android:id="@+id/title_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="@id/input_title"
+        app:layout_constraintTop_toTopOf="@id/input_title"
+
+        android:text="25/25"
+
+        android:paddingLeft="@dimen/dimens_18px"
+        android:paddingTop="@dimen/dimens_18px"
+
+        android:textSize="@dimen/dimens_32px"
+        android:textColor="@color/color_text_login_and_cadre"
+
+        android:visibility="gone"
+        />
+
+
+    <!--           Description             -->
+    <TextView
+        android:id="@+id/title_description_recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/input_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dimens_45px"
+        android:layout_marginRight="@dimen/dimens_55px"
+
+        app:layout_constraintVertical_bias="0.24"
+        android:text="وصف :"
+        android:textColor="@color/color_text_login_and_cadre"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimens_45px"
+        />
+
+    <ImageView
+        android:id="@+id/check_description"
+        android:layout_width="@dimen/dimens_55px"
+        android:layout_height="@dimen/dimens_55px"
+        app:layout_constraintEnd_toStartOf="@id/title_description_recipe"
+        app:layout_constraintTop_toTopOf="@id/title_description_recipe"
+        app:layout_constraintBottom_toBottomOf="@id/title_description_recipe"
+        android:background="@drawable/not_complet"
+        android:layout_marginEnd="@dimen/demens_23px"
+        android:layout_marginRight="@dimen/demens_23px" />
+    <View
+        android:layout_height="@dimen/dimens_2px"
+        android:background="@color/color_text_login_and_cadre"
+        app:layout_constraintTop_toBottomOf="@id/title_description_recipe"
+        app:layout_constraintStart_toStartOf="@id/title_description_recipe"
+        app:layout_constraintEnd_toEndOf="@id/title_description_recipe"
+        android:layout_width="0dp" />
+
+    <EditText
+        android:id="@+id/input_description"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dimens_130px"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_description_recipe"
+        android:layout_marginTop="@dimen/dimens_45px"
+
+        android:background="@drawable/edit_text_before_write"
+        android:hint="صف نفسك ، واكتب معلومات اضافية \nتريد الاخرين ان يتعرفو عليها ."
+
+
+        android:paddingRight="@dimen/dimens_55px"
+        android:paddingBottom="@dimen/dimens_45px"
+        android:paddingTop="@dimen/dimens_70px"
+        android:paddingLeft="@dimen/dimens_55px"
+
+        android:textColor="@color/color_text_login_and_cadre"
+        android:gravity="right|center_vertical"
+        android:textSize="@dimen/dimens_45px"
+
+        android:maxLength="200"
+        android:inputType="textMultiLine"
+        />
+    <TextView
+        android:id="@+id/description_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="@id/input_description"
+        app:layout_constraintTop_toTopOf="@id/input_description"
+
+        android:text="200/200"
+
+        android:paddingLeft="@dimen/dimens_18px"
+        android:paddingTop="@dimen/dimens_18px"
+
+        android:textSize="@dimen/dimens_32px"
+        android:textColor="@color/color_text_login_and_cadre"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btn_edit"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_height="@dimen/dimens_180px"
+        android:background="@drawable/btn_selector_share"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:textColor="@color/color_text_login_and_cadre"
+        android:text="تحديث"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimens_55px"
+        android:paddingRight="@dimen/dimens_45px"
+        android:drawableTop="@drawable/edit"
+        android:padding="@dimen/demens_23px"
+        android:layout_marginTop="@dimen/demens_65pex"
+        android:layout_marginBottom="@dimen/dimens_45px"
+        />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

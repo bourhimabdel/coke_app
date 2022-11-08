@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="ltr">
+
+    <com.joooonho.SelectableRoundedImageView
+        android:id="@+id/image_profil"
+        android:layout_width="@dimen/dimens_130px"
+        android:layout_height="@dimen/dimens_130px"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="@dimen/dimens_11px"
+        android:layout_marginTop="@dimen/dimens_32px"
+        app:sriv_oval="true"
+        />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text=""
+        android:textColor="@color/color_text_login_and_cadre"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimens_32px"
+        android:gravity="right|center"
+
+        app:layout_constraintTop_toTopOf="@id/image_profil"
+        app:layout_constraintEnd_toStartOf="@id/image_profil"
+        app:layout_constraintBottom_toTopOf="@id/view_start"
+        android:layout_marginRight="@dimen/dimens_11px"
+        />
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text=""
+        android:textColor="@color/color_text_login_and_cadre"
+        android:textStyle="italic"
+        android:textSize="@dimen/demens_23px"
+        android:layout_marginTop="@dimen/dimens_5px"
+
+        app:layout_constraintTop_toBottomOf="@id/image_profil"
+        app:layout_constraintStart_toStartOf="@id/image_profil"
+        app:layout_constraintEnd_toEndOf="@id/image_profil"
+        android:layout_marginRight="@dimen/dimens_11px"
+        android:gravity="center"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/text_name"
+        app:layout_constraintBottom_toBottomOf="@id/image_profil"
+        app:layout_constraintEnd_toStartOf="@id/image_profil"
+        android:layout_marginRight="@dimen/dimens_11px"
+        >
+        <ImageButton
+            android:id="@+id/start1"
+            android:layout_width="@dimen/dimens_55px"
+            android:layout_height="@dimen/dimens_55px"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/start2"
+            android:layout_marginTop="@dimen/dimens_32px"
+            android:layout_marginBottom="@dimen/dimens_32px"
+            android:background="@drawable/star_border"/>
+
+        <ImageButton
+            android:id="@+id/start2"
+            android:layout_width="@dimen/dimens_55px"
+            android:layout_height="@dimen/dimens_55px"
+            app:layout_constraintTop_toTopOf="@id/start1"
+            app:layout_constraintBottom_toBottomOf="@id/start1"
+            app:layout_constraintStart_toEndOf="@id/start1"
+            app:layout_constraintEnd_toStartOf="@id/start3"
+            android:background="@drawable/star_border"/>
+
+
+        <ImageButton
+            android:id="@+id/start3"
+            android:layout_width="@dimen/dimens_55px"
+            android:layout_height="@dimen/dimens_55px"
+            app:layout_constraintTop_toTopOf="@id/start1"
+            app:layout_constraintBottom_toBottomOf="@id/start1"
+            app:layout_constraintStart_toEndOf="@id/start2"
+            app:layout_constraintEnd_toStartOf="@id/start4"
+            android:background="@drawable/star_border"/>
+
+        <ImageButton
+            android:id="@+id/start4"
+            android:layout_width="@dimen/dimens_55px"
+            android:layout_height="@dimen/dimens_55px"
+            app:layout_constraintTop_toTopOf="@id/start1"
+            app:layout_constraintBottom_toBottomOf="@id/start1"
+            app:layout_constraintStart_toEndOf="@id/start3"
+            app:layout_constraintEnd_toStartOf="@id/start5"
+            android:background="@drawable/star_border"/>
+
+        <ImageButton
+            android:id="@+id/start5"
+            android:layout_width="@dimen/dimens_55px"
+            android:layout_height="@dimen/dimens_55px"
+            app:layout_constraintTop_toTopOf="@id/start1"
+            app:layout_constraintBottom_toBottomOf="@id/start1"
+            app:layout_constraintStart_toEndOf="@id/start4"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/star_border"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/text_comment"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:lineSpacingExtra="@dimen/dimens_11px"
+
+        android:background="@drawable/comment"
+
+        app:layout_constraintTop_toBottomOf="@id/image_profil"
+        android:layout_marginTop="@dimen/demens_23px"
+        app:layout_constraintEnd_toStartOf="@id/image_profil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/dimens_18px"
+
+
+
+        android:layout_marginLeft="@dimen/demens_23px"
+        android:textColor="@color/color_text_login_and_cadre"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimens_45px"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="@id/text_comment"
+        app:layout_constraintEnd_toEndOf="@id/text_comment"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/gr2"
+
+        />
+
+    <Button
+        android:id="@+id/btn_delet_comment"
+        android:layout_width="@dimen/dimen_100_px"
+        android:layout_height="@dimen/dimen_100_px"
+        android:background="@drawable/cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_profil"
+        app:layout_constraintBottom_toBottomOf="@id/image_profil"
+        android:layout_marginLeft="@dimen/dimens_18px"
+        android:layout_marginRight="@dimen/demens_23px"
+        android:visibility="gone"
+        />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

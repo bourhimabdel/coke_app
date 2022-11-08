@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="ltr">
+
+    <TextView
+        android:id="@+id/ingredient_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/dimens_850px"
+        android:background="@drawable/ingretien_view"
+        android:gravity="right"
+
+        android:textColor="@color/color_text_login_and_cadre"
+        android:textSize="@dimen/dimens_45px"
+        android:textStyle="bold"
+        android:text="الوصف يساعد القارئ علىالوصف يساعد القارئ على ان يتصور الوصفة بشكل اكبر"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        android:layout_marginTop="@dimen/dimens_32px"
+        android:layout_marginBottom="@dimen/dimens_32px"
+        android:layout_marginRight="@dimen/dimens_18px"
+
+
+        android:paddingRight="@dimen/dimens_45px"
+        android:paddingBottom="@dimen/dimens_45px"
+        android:paddingTop="@dimen/dimens_45px"
+        android:paddingLeft="@dimen/dimens_45px"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

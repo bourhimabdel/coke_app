@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="ltr">
+
+    <TextView
+        android:id="@+id/ingredient_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dimen_100_px"
+        android:maxWidth="@dimen/dimens_690px"
+        android:background="@drawable/ingretien_view"
+
+        android:textColor="@color/color_text_login_and_cadre"
+        android:gravity="right|center_vertical"
+        android:textSize="@dimen/dimens_45px"
+        android:textStyle="bold"
+        android:text="الوصف يساعد القارئ علىالوصف يساعد القارئ على ان يتصور الوصفة بشكل اكبر"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.9"
+
+        android:layout_marginTop="@dimen/dimens_32px"
+
+        android:paddingRight="@dimen/dimens_45px"
+        android:paddingBottom="@dimen/dimens_45px"
+        android:paddingTop="@dimen/dimens_45px"
+        android:paddingLeft="@dimen/dimens_45px"
+
+        android:lineSpacingExtra="@dimen/dimens_11px"
+        />
+
+    <Button
+        android:id="@+id/btn_delet_ingredient"
+        android:layout_width="@dimen/dimens_70px"
+        android:layout_height="@dimen/dimens_70px"
+        android:background="@drawable/cancel"
+        app:layout_constraintEnd_toStartOf="@id/ingredient_text"
+        app:layout_constraintTop_toTopOf="@id/ingredient_text"
+        app:layout_constraintBottom_toBottomOf="@id/ingredient_text"
+        android:layout_marginRight="@dimen/demens_23px"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

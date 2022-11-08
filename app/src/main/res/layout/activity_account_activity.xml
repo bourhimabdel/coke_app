@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
+    tools:context=".account_activity"
+    android:background="@color/background"
+    android:layoutDirection="ltr"
+   >
+
+
+
+          <!--  <com.joooonho.SelectableRoundedImageView
+                android:id="@+id/image_profil"
+                android:layout_width="@dimen/dimens_220px"
+                android:layout_height="@dimen/dimens_220px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/name_profile"
+                android:layout_marginTop="@dimen/dimens_45px"
+                app:sriv_oval="true"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_edit_info_user"
+                android:layout_height="@dimen/dimens_97px"
+                android:layout_width="@dimen/dimens_97px"
+                android:background="@drawable/circle_update_profile"
+                android:src="@drawable/edit"
+                app:layout_constraintBottom_toBottomOf="@id/image_profil"
+                app:layout_constraintStart_toStartOf="@id/image_profil"
+                app:layout_constraintEnd_toEndOf="@id/image_profil"
+                app:layout_constraintHorizontal_bias="1.2"
+                android:visibility="invisible"
+                />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_load_image"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/load"
+
+                android:layout_width="@dimen/dimens_250px"
+                android:layout_height="@dimen/dimens_250px"
+                app:layout_constraintStart_toStartOf="@id/image_profil"
+                app:layout_constraintEnd_toEndOf="@id/image_profil"
+                app:layout_constraintTop_toTopOf="@id/image_profil"
+                app:layout_constraintBottom_toBottomOf="@id/image_profil"
+                app:lottie_speed="2"
+                />
+
+            <TextView
+                android:id="@+id/name_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="الاسم الكامل"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_45px"
+                app:layout_constraintEnd_toEndOf="@id/text_bio"
+                app:layout_constraintStart_toStartOf="@id/text_bio"
+                app:layout_constraintTop_toBottomOf="@id/image_profil"
+                app:layout_constraintBottom_toTopOf="@id/text_bio"
+                android:layout_marginTop="@dimen/demens_23px"/>
+
+            <TextView
+                android:id="@+id/text_bio"
+                android:layout_width="wrap_content"
+                android:maxWidth="@dimen/dimens_690px"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/image_profil"
+                app:layout_constraintEnd_toEndOf="@id/image_profil"
+                app:layout_constraintTop_toBottomOf="@id/name_profile"
+                app:layout_constraintBottom_toTopOf="@id/cardview1"
+                android:hint="صف نفسك ، واكتب معلومات اضافية تريد الاخرين ان يتعرفو عليها ."
+                android:gravity="center"
+                android:textColor="@color/color_text_petit"
+                android:paddingBottom="@dimen/dimens_5px"
+                android:paddingTop="@dimen/dimens_5px"
+                android:layout_marginTop="@dimen/dimens_5px"
+                />-->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_recipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dimens_250px"
+            android:paddingTop="@dimen/dimens_130px"
+            android:visibility="invisible"
+            />
+    </androidx.core.widget.NestedScrollView>
+
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_no_serch_result"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/no_search_result"
+
+                android:layout_width="@dimen/dimens_550px"
+                android:layout_height="@dimen/dimens_550px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bottom_bar"
+                app:layout_constraintBottom_toTopOf="@id/text_empty"
+                android:visibility="invisible"
+                />
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_empty"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/empty_box"
+
+                android:layout_width="@dimen/dimens_550px"
+                android:layout_height="@dimen/dimens_550px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bottom_bar"
+                app:layout_constraintBottom_toTopOf="@id/text_empty"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:id="@+id/text_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="حاول(ي) أن تضيف(ي) إحدى وصفاتك المذهلة"
+                android:textColor="@color/color_text_petit"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_45px"
+                app:layout_constraintEnd_toEndOf="@id/lottie_no_serch_result"
+                app:layout_constraintStart_toStartOf="@id/lottie_no_serch_result"
+                app:layout_constraintTop_toBottomOf="@id/lottie_no_serch_result"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/dim_height_view_top"
+                android:layout_marginTop="@dimen/dimens_55px"
+                android:visibility="invisible"
+                />
+
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/bottom_bar">
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimens_130px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/spn_status"
+                android:theme="@style/AppSearchView"
+                app:queryHint="ابحث عن طريق العنوان"
+                android:background="@drawable/back_serch"
+                android:gravity="right"
+                android:focusable="false"
+                app:queryBackground="@color/background_snack"
+                />
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spn_status"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/search_view"
+                app:layout_constraintBottom_toBottomOf="@id/search_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/search_view"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:background="@drawable/btn_selector_gris"
+                />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dimens_85px"
+            app:layout_constraintTop_toTopOf="@id/spn_status"
+            app:layout_constraintBottom_toBottomOf="@id/spn_status"
+            app:layout_constraintStart_toEndOf="@id/spn_status"
+            android:background="@drawable/line"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+ <!--   <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_height_view_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/place_top_bar"
+        android:background="@drawable/back_snack_bar_top"
+        >
+
+        <ImageView
+            android:id="@+id/button_2"
+            android:layout_width= "@dimen/dimens_85px"
+            android:layout_height="@dimen/dimens_85px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_5"
+            android:background="@drawable/settings"
+
+            />
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width= "@dimen/dimens_2px"
+            android:layout_height="@dimen/dimens_70px"
+            app:layout_constraintEnd_toStartOf="@id/button_5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_1"
+            android:background="@color/color_text_login_and_cadre"
+
+            />
+        <ImageView
+            android:id="@+id/button_4"
+            android:layout_width= "@dimen/dimens_85px"
+            android:layout_height="@dimen/dimens_85px"
+            app:layout_constraintEnd_toStartOf="@id/view_4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_3"
+            android:background="@drawable/save"
+
+            />
+        <View
+            android:id="@+id/view_3"
+            android:layout_width= "@dimen/dimens_2px"
+            android:layout_height="@dimen/dimens_70px"
+            app:layout_constraintEnd_toStartOf="@id/button_4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_5"
+            android:background="@color/color_text_login_and_cadre"
+
+            />
+        <ImageView
+            android:id="@+id/button_5"
+            android:layout_width= "@dimen/dimens_85px"
+            android:layout_height="@dimen/dimens_85px"
+            app:layout_constraintEnd_toStartOf="@id/view_3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_2"
+            android:background="@drawable/search"
+            />
+        <View
+            android:id="@+id/view_4"
+            android:layout_width= "@dimen/dimens_2px"
+            android:layout_height="@dimen/dimens_70px"
+            app:layout_constraintEnd_toStartOf="@id/button_6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_4"
+            android:background="@color/color_text_login_and_cadre"
+            />
+        <ImageView
+            android:id="@+id/button_6"
+            android:layout_width= "@dimen/dimens_130px"
+            android:layout_height="@dimen/dimens_130px"
+            app:layout_constraintEnd_toStartOf="@id/view_5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/view_4"
+            android:background="@drawable/account"
+            android:layout_marginLeft="@dimen/demens_23px"
+            />
+        <View
+            android:id="@+id/view_5"
+            android:layout_width= "@dimen/dimens_2px"
+            android:layout_height="@dimen/dimens_70px"
+            app:layout_constraintEnd_toStartOf="@id/button_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_6"
+            android:background="@color/color_text_login_and_cadre"
+            />
+        <ImageView
+            android:id="@+id/button_1"
+            android:layout_width= "@dimen/dimens_85px"
+            android:layout_height="@dimen/dimens_85px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/view_2"
+            android:background="@drawable/home"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+
+    <ImageButton
+        android:id="@+id/btn_add_recipe_oval"
+        android:layout_width= "@dimen/dimens_180px"
+        android:layout_height="@dimen/dimens_180px"
+
+        android:background="@drawable/btn_selector_yellow_oval"
+        android:src="@drawable/ic_add_plat"
+
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/dimens_180px"
+        app:layout_constraintHorizontal_bias="0.95"
+
+        android:scaleType="centerCrop"
+
+        android:gravity="center"
+        />
+
+    <FrameLayout
+        android:id="@+id/fragment_show_account"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

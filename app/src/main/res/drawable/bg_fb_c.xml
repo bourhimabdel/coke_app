@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <shape xmlns:android="http://schemas.android.com/apk/res/android"
+     android:shape="rectangle" >
+    <corners
+        android:radius="@dimen/dimens_45px"/>
+
+     <solid android:color="@color/fb_color_c" />
+
+    <padding android:bottom="@dimen/demens_23px"
+        android:top="@dimen/demens_23px"
+        android:right="@dimen/demens_23px"
+        android:left="@dimen/demens_23px"/>
+ </shape>

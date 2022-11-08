@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_new_recipe"
+    tools:ignore="PxUsage"
+    android:layoutDirection="ltr"
+   >
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/background"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/bf"
+                android:layout_marginTop="@dimen/dimens_32px"
+                >
+
+            <!--         Info_Update_or_okey         -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_info_update_recipe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/view_info_update"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/text_description_info_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:maxWidth="@dimen/dimens_750px"
+                    android:minWidth="@dimen/dimens_690px"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    android:padding="@dimen/dimens_32px"
+
+
+                    android:text="tranle tduit instantanément des mots, des expressions et des pages Web du français vers plus de 100 autres languesduit instantanément des mots, des expressions et des pages Web du français vers plus de 100 autres languesduit instantanément des mots, des expressions et des pages Web du français vers plus de 100 autres languesduit instantanément des mots, des expressions et des pages Web du français vers plus de 100 autres languesraduit instantanément des mots, des expressions et des pages Web du français vers plus de 100 autres langues."
+                    android:textColor="@color/background"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_32px"
+                    android:gravity="right"
+
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--         reason to refuse         -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_reason_to_refuse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/view_raison_to_refuse"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:id="@+id/title_reason_refuse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginRight="@dimen/dimens_45px"
+                    android:layout_marginTop="@dimen/demens_23px"
+
+
+                    app:layout_constraintVertical_bias="0.24"
+                    android:text="سبب الرفض :"
+                    android:textColor="@color/background"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_45px"
+                    />
+                <ImageView
+                    android:layout_width="@dimen/dimens_55px"
+                    android:layout_height="@dimen/dimens_55px"
+
+
+                    app:layout_constraintEnd_toStartOf="@id/title_reason_refuse"
+                    app:layout_constraintTop_toTopOf="@id/title_reason_refuse"
+                    app:layout_constraintBottom_toBottomOf="@id/title_reason_refuse"
+                    android:background="@drawable/block"
+                    android:layout_marginEnd="@dimen/demens_23px"
+                    android:layout_marginRight="@dimen/demens_23px" />
+
+                <TextView
+                    android:id="@+id/text_description_reason_refuse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:maxWidth="@dimen/dimens_750px"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/title_reason_refuse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    android:layout_marginBottom="@dimen/dimens_32px"
+                    android:layout_marginTop="@dimen/dimens_32px"
+                    android:layout_marginRight="@dimen/dimens_55px"
+                    android:layout_marginLeft="@dimen/dimens_55px"
+
+
+                    android:text="tranle tduit instantanément des mots, des expressions et des pages Web du français vers plus de 100 autres languesduit instantanément des mots, des expressions et des pages Web du français vers plus de 100 autres languesduit instantanément des mots, des expressions et des pages Web du français vers plus de 100 autres languesduit instantanément des mots, des expressions et des pages Web du français vers plus de 100 autres languesraduit instantanément des mots, des expressions et des pages Web du français vers plus de 100 autres langues."
+                    android:textColor="@color/background"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_32px"
+                    android:gravity="right"
+
+                    />
+
+
+
+
+                <View
+                    android:layout_height="@dimen/dimens_2px"
+                    android:background="@color/background"
+                    app:layout_constraintTop_toBottomOf="@id/title_reason_refuse"
+                    app:layout_constraintStart_toStartOf="@id/title_reason_refuse"
+                    app:layout_constraintEnd_toEndOf="@id/title_reason_refuse"
+                    android:layout_width="0dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <!--           IMAGE             -->
+        <TextView
+           android:id="@+id/title_image_recipe"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/bf"
+           android:layout_marginTop="@dimen/dimens_32px"
+            android:layout_marginRight="@dimen/dimens_55px"
+
+
+           app:layout_constraintVertical_bias="0.24"
+            android:text="صورة الوصفة :"
+            android:textColor="@color/color_text_login_and_cadre"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimens_45px"
+            />
+            <ImageView
+                android:id="@+id/check_image"
+                android:layout_width="@dimen/dimens_55px"
+                android:layout_height="@dimen/dimens_55px"
+                app:layout_constraintEnd_toStartOf="@id/title_image_recipe"
+                app:layout_constraintTop_toTopOf="@id/title_image_recipe"
+                app:layout_constraintBottom_toBottomOf="@id/title_image_recipe"
+                android:background="@drawable/not_complet"
+                android:layout_marginEnd="@dimen/demens_23px"
+                android:layout_marginRight="@dimen/demens_23px" />
+
+            <View
+                android:layout_height="@dimen/dimens_2px"
+                android:background="@color/color_text_login_and_cadre"
+                app:layout_constraintTop_toBottomOf="@id/title_image_recipe"
+                app:layout_constraintStart_toStartOf="@id/title_image_recipe"
+                app:layout_constraintEnd_toEndOf="@id/title_image_recipe"
+                android:layout_width="0dp" />
+
+            <com.joooonho.SelectableRoundedImageView
+                android:id="@+id/image_image_recipe"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.8"
+                android:layout_height="@dimen/dimens_550px"
+                android:scaleType="centerInside"
+
+                app:sriv_left_top_corner_radius="@dimen/dimens_45px"
+                app:sriv_right_top_corner_radius="@dimen/dimens_45px"
+                app:sriv_left_bottom_corner_radius="@dimen/dimens_45px"
+                app:sriv_right_bottom_corner_radius="@dimen/dimens_45px"
+
+                app:layout_constraintTop_toBottomOf="@id/title_image_recipe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/dimens_45px"
+                android:visibility="gone"
+                tools:ignore="PxUsage" />
+            <ImageButton
+                android:id="@+id/btn_image_recipe"
+                android:layout_width="@dimen/dimens_130px"
+                android:layout_height="@dimen/dimens_130px"
+                android:background="@drawable/select_button_color"
+                android:src="@drawable/add_photo"
+                app:layout_constraintTop_toBottomOf="@id/image_image_recipe"
+                app:layout_constraintStart_toStartOf="@id/title_image_recipe"
+                app:layout_constraintEnd_toEndOf="@id/title_image_recipe"
+                android:layout_marginTop="@dimen/dimens_45px"
+                 />
+
+
+
+            <!--           TITLE             -->
+            <TextView
+                android:id="@+id/title_title_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toBottomOf="@id/btn_image_recipe"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/dimens_45px"
+                android:layout_marginRight="@dimen/dimens_55px"
+
+                app:layout_constraintVertical_bias="0.24"
+                android:text="عنوان الوصفة :"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_45px"
+                />
+
+            <ImageView
+                android:id="@+id/check_title"
+                android:layout_width="@dimen/dimens_55px"
+                android:layout_height="@dimen/dimens_55px"
+                app:layout_constraintEnd_toStartOf="@id/title_title_recipe"
+                app:layout_constraintTop_toTopOf="@id/title_title_recipe"
+                app:layout_constraintBottom_toBottomOf="@id/title_title_recipe"
+                android:background="@drawable/not_complet"
+                android:layout_marginEnd="@dimen/demens_23px"
+                android:layout_marginRight="@dimen/demens_23px" />
+            <View
+                android:layout_height="@dimen/dimens_2px"
+                android:background="@color/color_text_login_and_cadre"
+                app:layout_constraintTop_toBottomOf="@id/title_title_recipe"
+                app:layout_constraintStart_toStartOf="@id/title_title_recipe"
+                app:layout_constraintEnd_toEndOf="@id/title_title_recipe"
+                android:layout_width="0dp" />
+
+             <EditText
+                 android:id="@+id/input_title"
+                 android:layout_width="0dp"
+                 app:layout_constraintWidth_percent="0.8"
+                 android:layout_height="wrap_content"
+                 android:minHeight="@dimen/dimens_130px"
+
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintTop_toBottomOf="@id/title_title_recipe"
+                 android:layout_marginTop="@dimen/dimens_45px"
+
+                 android:background="@drawable/edit_text_before_write"
+                 android:hint="ابتكر(ي) عنوانا جدابا للوصفة"
+
+                 android:paddingRight="@dimen/dimens_45px"
+                 android:paddingBottom="@dimen/dimens_45px"
+                 android:paddingTop="@dimen/dimens_70px"
+                 android:paddingLeft="@dimen/dimens_45px"
+
+                 android:textColor="@color/color_text_login_and_cadre"
+                 android:gravity="right|center_vertical"
+                 android:textSize="@dimen/dimens_45px"
+                 android:textStyle="bold"
+                 android:lineSpacingExtra="@dimen/dimens_11px"
+
+                 android:maxLength="35"
+                 android:inputType="text"
+                 />
+            <TextView
+                android:id="@+id/title_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toStartOf="@id/input_title"
+                app:layout_constraintTop_toTopOf="@id/input_title"
+
+                android:text="35/35"
+
+                android:paddingLeft="@dimen/dimens_18px"
+                android:paddingTop="@dimen/dimens_18px"
+
+                android:textSize="@dimen/dimens_32px"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:visibility="gone"
+                />
+
+
+            <!--           Description             -->
+            <TextView
+                android:id="@+id/title_description_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toBottomOf="@id/input_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/dimens_45px"
+                android:layout_marginRight="@dimen/dimens_55px"
+
+                app:layout_constraintVertical_bias="0.24"
+                android:text="وصف الوصفة :"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_45px"
+                />
+
+            <ImageView
+                android:id="@+id/check_description"
+                android:layout_width="@dimen/dimens_55px"
+                android:layout_height="@dimen/dimens_55px"
+                app:layout_constraintEnd_toStartOf="@id/title_description_recipe"
+                app:layout_constraintTop_toTopOf="@id/title_description_recipe"
+                app:layout_constraintBottom_toBottomOf="@id/title_description_recipe"
+                android:background="@drawable/not_complet"
+                android:layout_marginEnd="@dimen/demens_23px"
+                android:layout_marginRight="@dimen/demens_23px" />
+            <View
+                android:layout_height="@dimen/dimens_2px"
+                android:background="@color/color_text_login_and_cadre"
+                app:layout_constraintTop_toBottomOf="@id/title_description_recipe"
+                app:layout_constraintStart_toStartOf="@id/title_description_recipe"
+                app:layout_constraintEnd_toEndOf="@id/title_description_recipe"
+                android:layout_width="0dp" />
+
+            <EditText
+                android:id="@+id/input_description"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.8"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dimens_130px"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_description_recipe"
+                android:layout_marginTop="@dimen/dimens_45px"
+
+                android:background="@drawable/edit_text_before_write"
+                android:hint="الوصف يساعد القارئ\n على ان يتصور الوصفة بشكل اكبر"
+
+                android:paddingRight="@dimen/dimens_55px"
+                android:paddingBottom="@dimen/dimens_45px"
+                android:paddingTop="@dimen/dimens_70px"
+                android:paddingLeft="@dimen/dimens_55px"
+
+                android:textColor="@color/color_text_login_and_cadre"
+                android:gravity="right|center_vertical"
+                android:textSize="@dimen/dimens_45px"
+                android:textStyle="bold"
+                android:lineSpacingExtra="@dimen/dimens_11px"
+
+                android:maxLength="200"
+                android:inputType="textMultiLine"
+                />
+            <TextView
+                android:id="@+id/description_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toStartOf="@id/input_description"
+                app:layout_constraintTop_toTopOf="@id/input_description"
+
+                android:text="200/200"
+
+                android:paddingLeft="@dimen/dimens_18px"
+                android:paddingTop="@dimen/dimens_18px"
+
+                android:textSize="@dimen/dimens_32px"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:visibility="gone"
+                />
+
+
+            <!--            Ingredients             -->
+
+            <TextView
+                android:id="@+id/title_ingredient_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toBottomOf="@id/input_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/dimens_45px"
+                android:layout_marginRight="@dimen/dimens_55px"
+
+                app:layout_constraintVertical_bias="0.24"
+                android:text="مكونات الوصفة :"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_45px"
+                />
+            <ImageView
+                android:id="@+id/check_ingredient"
+                android:layout_width="@dimen/dimens_55px"
+                android:layout_height="@dimen/dimens_55px"
+                app:layout_constraintEnd_toStartOf="@id/title_ingredient_recipe"
+                app:layout_constraintTop_toTopOf="@id/title_ingredient_recipe"
+                app:layout_constraintBottom_toBottomOf="@id/title_ingredient_recipe"
+                android:background="@drawable/not_complet"
+                android:layout_marginEnd="@dimen/demens_23px"
+                android:layout_marginRight="@dimen/demens_23px" />
+            <View
+                android:layout_height="@dimen/dimens_2px"
+                android:background="@color/color_text_login_and_cadre"
+                app:layout_constraintTop_toBottomOf="@id/title_ingredient_recipe"
+                app:layout_constraintStart_toStartOf="@id/title_ingredient_recipe"
+                app:layout_constraintEnd_toEndOf="@id/title_ingredient_recipe"
+                android:layout_width="0dp" />
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/list_ingredients"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.8"
+                android:layout_height="wrap_content"
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_ingredient_recipe"
+                android:layout_marginTop="@dimen/dimens_45px"
+
+                android:visibility="gone"
+
+                />
+
+            <EditText
+                android:id="@+id/input_ingredient"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.65"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dimens_130px"
+
+
+                app:layout_constraintEnd_toEndOf="@id/input_description"
+                app:layout_constraintTop_toBottomOf="@id/list_ingredients"
+                android:layout_marginTop="@dimen/dimens_45px"
+
+                android:background="@drawable/add_ingredient_shape"
+                android:hint="اسم المكون وكميته"
+
+                android:paddingRight="@dimen/dimens_45px"
+                android:paddingBottom="@dimen/dimens_45px"
+                android:paddingTop="@dimen/dimens_45px"
+                android:paddingLeft="@dimen/dimens_45px"
+
+                android:textColor="@color/color_text_login_and_cadre"
+                android:gravity="right|center_vertical"
+                android:textSize="@dimen/dimens_45px"
+                android:textStyle="bold"
+                android:lineSpacingExtra="@dimen/dimens_11px"
+                android:inputType="text"
+                />
+            <TextView
+                android:id="@+id/ingredient_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toStartOf="@id/input_ingredient"
+                app:layout_constraintTop_toTopOf="@id/input_ingredient"
+
+                android:text="30/30"
+
+                android:paddingLeft="@dimen/dimens_18px"
+                android:paddingTop="@dimen/dimens_18px"
+
+                android:textSize="@dimen/dimens_32px"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:visibility="gone"
+                />
+            <View
+                android:id="@+id/vbi"
+                android:layout_height="@dimen/dimens_130px"
+                android:layout_width="@dimen/dimens_130px"
+                android:background="@drawable/add_ingredient_shape"
+               app:layout_constraintTop_toTopOf="@id/input_ingredient"
+                app:layout_constraintBottom_toBottomOf="@id/input_ingredient"
+                app:layout_constraintEnd_toStartOf="@id/input_ingredient"
+                android:layout_marginRight="@dimen/dimens_45px"/>
+
+            <ImageButton
+                android:id="@+id/btn_add_ingredient"
+                android:layout_height="@dimen/dimens_130px"
+                android:layout_width="@dimen/dimens_130px"
+                android:background="@drawable/select_button_color"
+                android:src="@drawable/add"
+                app:layout_constraintTop_toTopOf="@id/vbi"
+                app:layout_constraintBottom_toBottomOf="@id/vbi"
+                app:layout_constraintStart_toStartOf="@id/vbi"
+                app:layout_constraintEnd_toEndOf="@id/vbi"
+                />
+
+
+
+
+            <!--            How_to_prepare             -->
+
+            <TextView
+                android:id="@+id/title_prepare_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toBottomOf="@id/input_ingredient"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/dimens_45px"
+                android:layout_marginRight="@dimen/dimens_55px"
+
+                app:layout_constraintVertical_bias="0.24"
+                android:text="خطوات اعداد الوصفة :"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textSize="@dimen/dimens_45px"
+                android:textStyle="bold"
+
+                />
+            <ImageView
+                android:id="@+id/check_prepare"
+                android:layout_width="@dimen/dimens_55px"
+                android:layout_height="@dimen/dimens_55px"
+                app:layout_constraintEnd_toStartOf="@id/title_prepare_recipe"
+                app:layout_constraintTop_toTopOf="@id/title_prepare_recipe"
+                app:layout_constraintBottom_toBottomOf="@id/title_prepare_recipe"
+                android:background="@drawable/not_complet"
+                android:layout_marginEnd="@dimen/demens_23px"
+                android:layout_marginRight="@dimen/demens_23px" />
+            <View
+                android:layout_height="@dimen/dimens_2px"
+                android:background="@color/color_text_login_and_cadre"
+                app:layout_constraintTop_toBottomOf="@id/title_prepare_recipe"
+                app:layout_constraintStart_toStartOf="@id/title_prepare_recipe"
+                app:layout_constraintEnd_toEndOf="@id/title_prepare_recipe"
+                android:layout_width="0dp" />
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/list_prepare"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.8"
+                android:layout_height="wrap_content"
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_prepare_recipe"
+                android:layout_marginTop="@dimen/dimens_45px"
+
+                android:visibility="gone"
+
+                />
+
+            <EditText
+                android:id="@+id/input_prepare"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.65"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dimens_130px"
+
+
+                app:layout_constraintEnd_toEndOf="@id/input_ingredient"
+                app:layout_constraintTop_toBottomOf="@id/list_prepare"
+                android:layout_marginTop="@dimen/dimens_45px"
+
+                android:background="@drawable/add_ingredient_shape"
+                android:hint="الخطوة التالية ..."
+
+                android:paddingRight="@dimen/dimens_45px"
+                android:paddingBottom="@dimen/dimens_45px"
+                android:paddingTop="@dimen/dimens_45px"
+                android:paddingLeft="@dimen/dimens_45px"
+
+                android:textColor="@color/color_text_login_and_cadre"
+                android:gravity="right|center_vertical"
+                android:textSize="@dimen/dimens_45px"
+                android:textStyle="bold"
+                android:lineSpacingExtra="@dimen/dimens_11px"
+                android:inputType="textMultiLine"
+                />
+            <TextView
+                android:id="@+id/prepare_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toStartOf="@id/input_prepare"
+                app:layout_constraintTop_toTopOf="@id/input_prepare"
+
+                android:text="150/150"
+
+                android:paddingLeft="@dimen/dimens_18px"
+                android:paddingTop="@dimen/dimens_18px"
+
+                android:textSize="@dimen/dimens_32px"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:visibility="gone"
+                />
+            <View
+                android:id="@+id/vbp"
+                android:layout_height="@dimen/dimens_130px"
+                android:layout_width="@dimen/dimens_130px"
+                android:background="@drawable/add_ingredient_shape"
+                app:layout_constraintTop_toTopOf="@id/input_prepare"
+                app:layout_constraintBottom_toBottomOf="@id/input_prepare"
+                app:layout_constraintEnd_toStartOf="@id/input_prepare"
+                android:layout_marginRight="@dimen/dimens_45px"/>
+
+            <ImageButton
+                android:id="@+id/btn_add_prepare"
+                android:layout_height="@dimen/dimens_130px"
+                android:layout_width="@dimen/dimens_130px"
+                android:background="@drawable/select_button_color"
+                android:src="@drawable/add"
+                app:layout_constraintTop_toTopOf="@id/vbp"
+                app:layout_constraintBottom_toBottomOf="@id/vbp"
+                app:layout_constraintStart_toStartOf="@id/vbp"
+                app:layout_constraintEnd_toEndOf="@id/vbp"
+                />
+
+
+            <!--                Spinner_number_person                      -->
+            <TextView
+                android:id="@+id/title_person_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toBottomOf="@id/input_prepare"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/dimens_70px"
+                android:layout_marginRight="@dimen/dimens_55px"
+
+                app:layout_constraintVertical_bias="0.24"
+                android:text="عدد الاشخاص :"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textSize="@dimen/dimens_45px"
+                android:textStyle="bold"
+                />
+            <ImageView
+                android:id="@+id/check_person"
+                android:layout_width="@dimen/dimens_55px"
+                android:layout_height="@dimen/dimens_55px"
+                app:layout_constraintEnd_toStartOf="@id/title_person_recipe"
+                app:layout_constraintTop_toTopOf="@id/title_person_recipe"
+                app:layout_constraintBottom_toBottomOf="@id/title_person_recipe"
+                android:background="@drawable/not_complet"
+                android:layout_marginEnd="@dimen/demens_23px"
+                android:layout_marginRight="@dimen/demens_23px" />
+            <View
+                android:layout_height="@dimen/dimens_2px"
+                android:background="@color/color_text_login_and_cadre"
+                app:layout_constraintTop_toBottomOf="@id/title_person_recipe"
+                app:layout_constraintStart_toStartOf="@id/title_person_recipe"
+                app:layout_constraintEnd_toEndOf="@id/title_person_recipe"
+                android:layout_width="0dp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Cp"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.3"
+                android:layout_height="@dimen/dimens_180px"
+                app:layout_constraintTop_toBottomOf="@id/title_person_recipe"
+                app:layout_constraintEnd_toEndOf="@id/input_prepare"
+                android:layout_marginTop="@dimen/dimens_45px"
+                >
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/number_person"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.5"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ip"
+                    android:background="@drawable/back_spn_in_add_recipe"
+                    />
+                <View
+                    android:id="@+id/view_spinner_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edit_text_before_write"/>
+                <ImageView
+                    android:id="@+id/ip"
+                    android:layout_width="@dimen/dimens_70px"
+                    android:layout_height="@dimen/dimens_70px"
+                    android:background="@drawable/people"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/number_person"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+            <!--                Spinner_number_Munitt                      -->
+
+            <View
+                android:layout_height="0dp"
+                android:background="@color/color_text_login_and_cadre"
+               app:layout_constraintBottom_toBottomOf="@id/Cp"
+                app:layout_constraintTop_toBottomOf="@id/title_person_recipe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="@dimen/dimens_2px"
+                android:id="@+id/v_separe"/>
+
+
+            <TextView
+                android:id="@+id/title_time_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toBottomOf="@id/input_prepare"
+                app:layout_constraintEnd_toEndOf="@id/v_separe"
+                android:layout_marginTop="@dimen/dimens_70px"
+                android:layout_marginRight="@dimen/dimens_55px"
+
+                app:layout_constraintVertical_bias="0.24"
+                android:text="دقائق الطبخ :"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textSize="@dimen/dimens_45px"
+                android:textStyle="bold"
+                />
+            <ImageView
+                android:id="@+id/check_time"
+                android:layout_width="@dimen/dimens_55px"
+                android:layout_height="@dimen/dimens_55px"
+                app:layout_constraintEnd_toStartOf="@id/title_time_recipe"
+                app:layout_constraintTop_toTopOf="@id/title_time_recipe"
+                app:layout_constraintBottom_toBottomOf="@id/title_time_recipe"
+                android:background="@drawable/not_complet"
+                android:layout_marginEnd="@dimen/demens_23px"
+                android:layout_marginRight="@dimen/demens_23px" />
+            <View
+                android:layout_height="@dimen/dimens_2px"
+                android:background="@color/color_text_login_and_cadre"
+                app:layout_constraintTop_toBottomOf="@id/title_time_recipe"
+                app:layout_constraintStart_toStartOf="@id/title_time_recipe"
+                app:layout_constraintEnd_toEndOf="@id/title_time_recipe"
+                android:layout_width="0dp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Ci"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.3"
+                android:layout_height="@dimen/dimens_180px"
+                app:layout_constraintTop_toBottomOf="@id/title_person_recipe"
+                app:layout_constraintStart_toStartOf="@id/input_description"
+                android:layout_marginTop="@dimen/dimens_45px">
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/number_time"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.5"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/it"
+                    android:background="@drawable/back_spn_in_add_recipe"
+                    />
+                <View
+                    android:id="@+id/view_spinner_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edit_text_before_write"/>
+                <ImageView
+                    android:id="@+id/it"
+                    android:layout_width="@dimen/dimens_70px"
+                    android:layout_height="@dimen/dimens_70px"
+                    android:background="@drawable/time"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/number_time"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            <!--                Spinner_categories_person                      -->
+            <TextView
+                android:id="@+id/title_categories_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toBottomOf="@id/Ci"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/dimens_70px"
+                android:layout_marginRight="@dimen/dimens_55px"
+
+                app:layout_constraintVertical_bias="0.24"
+                android:text="الصنف :"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textSize="@dimen/dimens_45px"
+                android:textStyle="bold"
+                />
+            <ImageView
+                android:id="@+id/check_categories"
+                android:layout_width="@dimen/dimens_55px"
+                android:layout_height="@dimen/dimens_55px"
+                app:layout_constraintEnd_toStartOf="@id/title_categories_recipe"
+                app:layout_constraintTop_toTopOf="@id/title_categories_recipe"
+                app:layout_constraintBottom_toBottomOf="@id/title_categories_recipe"
+                android:background="@drawable/not_complet"
+                android:layout_marginEnd="@dimen/demens_23px"
+                android:layout_marginRight="@dimen/demens_23px" />
+            <View
+                android:layout_height="@dimen/dimens_2px"
+                android:background="@color/color_text_login_and_cadre"
+                app:layout_constraintTop_toBottomOf="@id/title_categories_recipe"
+                app:layout_constraintStart_toStartOf="@id/title_categories_recipe"
+                app:layout_constraintEnd_toEndOf="@id/title_categories_recipe"
+                android:layout_width="0dp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Cc"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.4"
+                android:layout_height="@dimen/dimens_180px"
+                app:layout_constraintTop_toBottomOf="@id/title_categories_recipe"
+                app:layout_constraintStart_toEndOf="@id/v_separe2"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/dimens_45px"
+
+                >
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/number_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/back_spn_in_add_recipe"
+
+                    />
+                <View
+                    android:id="@+id/view_spinner_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edit_text_before_write"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <!--                Spinner_cuisine                     -->
+
+            <View
+                android:layout_height="0dp"
+                android:background="@color/color_text_login_and_cadre"
+                app:layout_constraintBottom_toBottomOf="@id/Cc"
+                app:layout_constraintTop_toBottomOf="@id/title_categories_recipe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="@dimen/dimens_2px"
+                android:id="@+id/v_separe2"/>
+
+
+            <TextView
+                android:id="@+id/title_cuisine_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toBottomOf="@id/Ci"
+                app:layout_constraintEnd_toEndOf="@id/v_separe2"
+                android:layout_marginTop="@dimen/dimens_70px"
+                android:layout_marginRight="@dimen/dimens_55px"
+
+                app:layout_constraintVertical_bias="0.24"
+                android:text="المطبخ :"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textSize="@dimen/dimens_45px"
+                android:textStyle="bold"
+                />
+            <ImageView
+                android:id="@+id/check_cuisine"
+                android:layout_width="@dimen/dimens_55px"
+                android:layout_height="@dimen/dimens_55px"
+                app:layout_constraintEnd_toStartOf="@id/title_cuisine_recipe"
+                app:layout_constraintTop_toTopOf="@id/title_cuisine_recipe"
+                app:layout_constraintBottom_toBottomOf="@id/title_cuisine_recipe"
+                android:background="@drawable/not_complet"
+                android:layout_marginEnd="@dimen/demens_23px"
+                android:layout_marginRight="@dimen/demens_23px" />
+            <View
+                android:layout_height="@dimen/dimens_2px"
+                android:background="@color/color_text_login_and_cadre"
+                app:layout_constraintTop_toBottomOf="@id/title_cuisine_recipe"
+                app:layout_constraintStart_toStartOf="@id/title_cuisine_recipe"
+                app:layout_constraintEnd_toEndOf="@id/title_cuisine_recipe"
+                android:layout_width="0dp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Ccui"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.4"
+                android:layout_height="@dimen/dimens_180px"
+                app:layout_constraintTop_toBottomOf="@id/title_cuisine_recipe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/v_separe2"
+                android:layout_marginTop="@dimen/dimens_45px">
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/number_cuisine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/back_spn_in_add_recipe"
+
+                    />
+                <View
+                    android:id="@+id/view_spinner_cuisine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edit_text_before_write"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.51"
+                android:layout_height="@dimen/dimens_180px"
+                android:background="@drawable/btn_selector_share"
+
+                app:layout_constraintStart_toEndOf="@id/btn_cancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Cc"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="@dimen/dimens_70px"
+                android:layout_marginBottom="@dimen/dimens_220px"
+
+                android:gravity="right|center_vertical"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:text="اضافة الوصفة"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_45px"
+                android:paddingRight="@dimen/demens_23px"
+              android:drawableLeft="@drawable/check" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.39"
+                android:layout_height="@dimen/dimens_180px"
+                android:background="@drawable/btn_selector_rate_us"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn_add"
+                app:layout_constraintEnd_toStartOf="@id/btn_add"
+                app:layout_constraintBottom_toBottomOf="@id/btn_add"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:text="اكمل لاحقا"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_45px"
+                android:paddingRight="@dimen/demens_23px"
+                android:drawableLeft="@drawable/history"
+                />
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimens_180px"
+                android:background="@drawable/update_recipe_button_color"
+
+                app:layout_constraintStart_toStartOf="@id/btn_cancel"
+                app:layout_constraintEnd_toEndOf="@id/btn_add"
+                app:layout_constraintTop_toBottomOf="@id/Cc"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="@dimen/dimens_70px"
+                android:layout_marginBottom="@dimen/dimens_220px"
+
+                android:gravity="right|center_vertical"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:text="تحديث الوصفة"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_45px"
+                android:paddingRight="@dimen/dimens_70px"
+                android:drawableLeft="@drawable/update"
+                android:paddingLeft="@dimen/dimens_70px"
+                android:visibility="invisible"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

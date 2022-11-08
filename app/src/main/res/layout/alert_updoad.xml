@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_upload_alert"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_download"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/download"
+
+        android:layout_width="@dimen/dimens_420px"
+        android:layout_height="@dimen/dimens_420px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintVertical_bias="0.2"
+        android:rotation="180"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_ok"
+        app:lottie_rawRes="@raw/add_succes"
+
+        android:layout_width="@dimen/dimens_420px"
+        android:layout_height="@dimen/dimens_420px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        android:visibility="invisible"
+
+        />
+
+    <pl.pawelkleczkowski.customgauge.CustomGauge
+        android:id="@+id/progressbar"
+        android:layout_width="@dimen/dimens_420px"
+        android:layout_height="@dimen/dimens_420px"
+
+        app:layout_constraintStart_toStartOf="@id/lottie_download"
+        app:layout_constraintEnd_toEndOf="@id/lottie_download"
+        app:layout_constraintTop_toTopOf="@id/lottie_download"
+        app:layout_constraintBottom_toBottomOf="@id/lottie_download"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+
+
+        app:gaugePointEndColor="#3DEBFF"
+        app:gaugePointStartColor="#246887"
+        app:gaugeStartAngle="270"
+        app:gaugeStrokeCap="ROUND"
+        app:gaugeStrokeColor="@color/color_text_login_and_cadre"
+        app:gaugeStrokeWidth="10dp"
+        app:gaugeSweepAngle="360"
+
+        android:layout_marginRight="@dimen/dimens_130px"
+        android:layout_marginLeft="@dimen/dimens_130px"
+        />
+
+    <TextView
+        android:id="@+id/text_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_45px"
+        android:gravity="center"
+        android:text="يتم حفض الوصفة"
+        android:textColor="@color/color_text_petit"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimens_45px"
+        app:layout_constraintEnd_toEndOf="@id/progressbar"
+        app:layout_constraintStart_toStartOf="@id/progressbar"
+        app:layout_constraintTop_toBottomOf="@id/progressbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_marginBottom="@dimen/dimens_32px"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

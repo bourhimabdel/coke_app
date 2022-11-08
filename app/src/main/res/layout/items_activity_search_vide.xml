@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:layoutDirection="ltr">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview1"
+        android:layout_width= "0dp"
+        app:layout_constraintWidth_percent="0.97"
+        android:layout_height="wrap_content"
+
+        app:cardCornerRadius="@dimen/dimens_32px"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        app:cardBackgroundColor="@color/background_card"
+
+        android:layout_marginBottom="@dimen/dimens_45px"
+        android:layout_marginTop="@dimen/dimens_45px"
+
+        app:cardPreventCornerOverlap="false"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/button_title"
+                android:layout_width="@dimen/dimens_550px"
+                android:layout_height="@dimen/dimens_180px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/back_title_search"
+                android:backgroundTint="@color/colorPrimaryDark"
+                />
+
+            <Button
+                android:id="@+id/button_image"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimens_750px"
+                app:layout_constraintWidth_percent="0.97"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_title"
+                app:layout_constraintBottom_toTopOf="@id/button_time"
+                android:layout_marginTop="@dimen/demens_23px"
+                android:layout_marginBottom="@dimen/demens_23px"
+                android:background="@drawable/back_image_search_vide"
+                android:backgroundTint="@color/colorPrimaryDark"
+                />
+
+
+            <Button
+                android:id="@+id/button_person"
+                android:layout_width= "0dp"
+                app:layout_constraintWidth_percent="0.33"
+                android:layout_height="@dimen/dimens_130px"
+                android:background="@drawable/p"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/button_time"
+
+                android:backgroundTint="@color/colorPrimaryDark"
+
+
+                />
+            <Button
+                android:id="@+id/button_time"
+                android:layout_width= "0dp"
+                app:layout_constraintWidth_percent="0.33"
+                android:layout_height="@dimen/dimens_130px"
+                android:background="@drawable/t"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/button_person"
+                app:layout_constraintEnd_toStartOf="@id/button_date"
+
+                android:backgroundTint="@color/colorPrimaryDark"
+
+                />
+            <Button
+                android:id="@+id/button_date"
+                android:layout_width= "0dp"
+                app:layout_constraintWidth_percent="0.33"
+                android:layout_height="@dimen/dimens_130px"
+                android:background="@drawable/d"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/button_time"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="@color/colorPrimaryDark"
+                />
+
+            <Button
+                android:id="@+id/button_start"
+                android:layout_width="@dimen/dimens_130px"
+                android:layout_height="@dimen/dimens_130px"
+
+                android:background="@drawable/circle_update_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                android:layout_marginTop="@dimen/dimens_32px"
+                android:layout_marginStart="@dimen/dimens_32px"
+
+                android:layout_marginLeft="@dimen/dimens_11px"
+                android:backgroundTint="@color/colorPrimaryDark"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

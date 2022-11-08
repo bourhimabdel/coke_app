@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Save_activity"
+    android:background="@color/background"
+    android:layoutDirection="ltr">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/activity_searchh"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dimens_220px"
+            >
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_130px"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/AppSearchView"
+        app:queryHint="ابحث عن طريق العنوان"
+        android:background="@drawable/back_serch_activity_search"
+        android:gravity="right"
+        app:queryBackground="@color/background_snack"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/search_view"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:paddingTop="@dimen/dimens_130px"
+                android:visibility="invisible"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_no_serch_result"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/no_search_result"
+
+        android:layout_width="@dimen/dimens_550px"
+        android:layout_height="@dimen/dimens_550px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text_empty"
+        android:visibility="invisible"
+        />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_empty"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/saved"
+        app:lottie_speed="0.75"
+
+        android:layout_width="@dimen/dimens_550px"
+        android:layout_height="@dimen/dimens_550px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text_empty"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/text_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="تظهر هنا جميع الوصفات التي تم حفظها"
+        android:textColor="@color/color_text_petit"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimens_45px"
+        app:layout_constraintEnd_toEndOf="@id/lottie_no_serch_result"
+        app:layout_constraintStart_toStartOf="@id/lottie_no_serch_result"
+        app:layout_constraintTop_toBottomOf="@id/lottie_no_serch_result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/dim_height_view_top"
+        android:layout_marginTop="@dimen/dimens_55px"
+        android:visibility="invisible"
+        />
+
+    <FrameLayout
+        android:id="@+id/fragment_show_save"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

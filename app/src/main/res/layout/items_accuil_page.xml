@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="PxUsage"
+    android:layoutDirection="ltr">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintHeight_percent="0.29"
+
+        app:cardCornerRadius="@dimen/dimens_45px"
+        android:layout_margin="@dimen/demens_23px"
+
+        app:layout_constraintBottom_toTopOf="@id/cardview3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+
+        app:cardPreventCornerOverlap="false"
+        android:background="@color/background"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.joooonho.SelectableRoundedImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:sriv_left_top_corner_radius="@dimen/dimens_45px"
+                app:sriv_right_top_corner_radius="@dimen/dimens_45px"
+                app:sriv_left_bottom_corner_radius="@dimen/dimens_45px"
+                app:sriv_right_bottom_corner_radius="@dimen/dimens_45px"
+                 />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back_itemx_accuil"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_load1"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/load"
+
+                android:layout_width= "0dp"
+                app:layout_constraintWidth_percent="0.9"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/image"
+                app:layout_constraintEnd_toEndOf="@id/image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_speed="2"
+                />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:maxWidth="@dimen/dimens_300px"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="شاهد الآن التمرينات الإحمائية لمباريات الليلة"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_55px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimens_11px"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintEnd_toEndOf="@id/title"
+                android:background="@drawable/line"
+                android:layout_marginTop="@dimen/dimens_11px"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintHeight_percent="0.29"
+
+        app:cardCornerRadius="@dimen/dimens_45px"
+        android:layout_margin="@dimen/demens_23px"
+
+        app:layout_constraintBottom_toTopOf="@id/cardview4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+
+        app:cardPreventCornerOverlap="false"
+        android:background="@color/background"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.joooonho.SelectableRoundedImageView
+                android:id="@+id/image2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:sriv_left_top_corner_radius="@dimen/dimen_15"
+                app:sriv_right_top_corner_radius="@dimen/dimen_15"
+                app:sriv_left_bottom_corner_radius="@dimen/dimen_15"
+                app:sriv_right_bottom_corner_radius="@dimen/dimen_15"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back_itemx_accuil"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_load2"
+                android:layout_width= "0dp"
+                app:layout_constraintWidth_percent="0.9"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="@id/image2"
+                app:layout_constraintStart_toStartOf="@id/image2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_speed="2"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/load" />
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:maxWidth="@dimen/dimens_300px"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="شاهد الآن التمرينات الإحمائية لمباريات الليلة"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_55px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimens_11px"
+                app:layout_constraintTop_toBottomOf="@id/title2"
+                app:layout_constraintStart_toStartOf="@id/title2"
+                app:layout_constraintEnd_toEndOf="@id/title2"
+                android:background="@drawable/line"
+                android:layout_marginTop="@dimen/dimens_11px"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintHeight_percent="0.29"
+
+        app:cardCornerRadius="@dimen/dimens_45px"
+        android:layout_margin="@dimen/demens_23px"
+
+        app:layout_constraintBottom_toTopOf="@id/cardview5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardview"
+        app:layout_constraintHorizontal_bias="0"
+        app:cardPreventCornerOverlap="false"
+        android:background="@color/background"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.joooonho.SelectableRoundedImageView
+                android:id="@+id/image3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:sriv_left_top_corner_radius="@dimen/dimen_15"
+                app:sriv_right_top_corner_radius="@dimen/dimen_15"
+                app:sriv_left_bottom_corner_radius="@dimen/dimen_15"
+                app:sriv_right_bottom_corner_radius="@dimen/dimen_15"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/back_itemx_accuil"/>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_load3"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/load"
+
+                android:layout_width= "0dp"
+                app:layout_constraintWidth_percent="0.9"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/image3"
+                app:layout_constraintEnd_toEndOf="@id/image3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_speed="2"
+                />
+            <TextView
+                android:id="@+id/title3"
+                android:layout_width="wrap_content"
+                android:maxWidth="@dimen/dimens_300px"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="شاهد الآن التمرينات الإحمائية لمباريات الليلة"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_55px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimens_11px"
+                app:layout_constraintTop_toBottomOf="@id/title3"
+                app:layout_constraintStart_toStartOf="@id/title3"
+                app:layout_constraintEnd_toEndOf="@id/title3"
+                android:background="@drawable/line"
+                android:layout_marginTop="@dimen/dimens_11px"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintHeight_percent="0.29"
+
+        app:cardCornerRadius="@dimen/dimens_45px"
+        android:layout_margin="@dimen/demens_23px"
+
+        app:layout_constraintBottom_toTopOf="@id/cardview6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardview2"
+        app:layout_constraintHorizontal_bias="1"
+
+        app:cardPreventCornerOverlap="false"
+        android:background="@color/background"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.joooonho.SelectableRoundedImageView
+                android:id="@+id/image4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:sriv_left_top_corner_radius="@dimen/dimen_15"
+                app:sriv_right_top_corner_radius="@dimen/dimen_15"
+                app:sriv_left_bottom_corner_radius="@dimen/dimen_15"
+                app:sriv_right_bottom_corner_radius="@dimen/dimen_15"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back_itemx_accuil"
+                app:layout_constraintBottom_toBottomOf="parent" />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_load4"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/load"
+
+                android:layout_width= "0dp"
+                app:layout_constraintWidth_percent="0.9"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/image4"
+                app:layout_constraintEnd_toEndOf="@id/image4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_speed="2"
+                />
+            <TextView
+                android:id="@+id/title4"
+                android:layout_width="wrap_content"
+
+                android:maxWidth="@dimen/dimens_300px"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="شاهد الآن التمرينات الإحمائية لمباريات الليلة"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_55px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimens_11px"
+                app:layout_constraintTop_toBottomOf="@id/title4"
+                app:layout_constraintStart_toStartOf="@id/title4"
+                app:layout_constraintEnd_toEndOf="@id/title4"
+                android:background="@drawable/line"
+                android:layout_marginTop="@dimen/dimens_11px"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintHeight_percent="0.29"
+
+        app:cardCornerRadius="@dimen/dimens_45px"
+        android:layout_margin="@dimen/demens_23px"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardview3"
+        app:layout_constraintHorizontal_bias="0"
+
+        app:cardPreventCornerOverlap="false"
+        android:background="@color/background"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.joooonho.SelectableRoundedImageView
+                android:id="@+id/image5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:sriv_left_top_corner_radius="@dimen/dimen_15"
+                app:sriv_right_top_corner_radius="@dimen/dimen_15"
+                app:sriv_left_bottom_corner_radius="@dimen/dimen_15"
+                app:sriv_right_bottom_corner_radius="@dimen/dimen_15"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back_itemx_accuil"
+                app:layout_constraintBottom_toBottomOf="parent" />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_load5"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/load"
+
+                android:layout_width= "0dp"
+                app:layout_constraintWidth_percent="0.9"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/image5"
+                app:layout_constraintEnd_toEndOf="@id/image5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_speed="2"
+                />
+            <TextView
+                android:id="@+id/title5"
+                android:layout_width="wrap_content"
+                android:maxWidth="@dimen/dimens_300px"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="شاهد الآن التمرينات الإحمائية لمباريات الليلة"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_55px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimens_11px"
+                app:layout_constraintTop_toBottomOf="@id/title5"
+                app:layout_constraintStart_toStartOf="@id/title5"
+                app:layout_constraintEnd_toEndOf="@id/title5"
+                android:background="@drawable/line"
+                android:layout_marginTop="@dimen/dimens_11px"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintHeight_percent="0.29"
+
+        app:cardCornerRadius="@dimen/dimens_45px"
+        android:layout_margin="@dimen/demens_23px"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardview4"
+        app:layout_constraintHorizontal_bias="1"
+
+        app:cardPreventCornerOverlap="false"
+        android:background="@color/background"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.joooonho.SelectableRoundedImageView
+                android:id="@+id/image6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:sriv_left_top_corner_radius="@dimen/dimens_45px"
+                app:sriv_right_top_corner_radius="@dimen/dimens_45px"
+                app:sriv_left_bottom_corner_radius="@dimen/dimens_45px"
+                app:sriv_right_bottom_corner_radius="@dimen/dimens_45px"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back_itemx_accuil"
+                app:layout_constraintBottom_toBottomOf="parent" />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_load6"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/load"
+
+                android:layout_width= "0dp"
+                app:layout_constraintWidth_percent="0.9"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/image6"
+                app:layout_constraintEnd_toEndOf="@id/image6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_speed="2"
+                />
+            <TextView
+                android:id="@+id/title6"
+                android:layout_width="wrap_content"
+                android:maxWidth="@dimen/dimens_300px"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="شاهد الآن التمرينات الإحمائية لمباريات الليلة"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_55px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimens_11px"
+                app:layout_constraintTop_toBottomOf="@id/title6"
+                app:layout_constraintStart_toStartOf="@id/title6"
+                app:layout_constraintEnd_toEndOf="@id/title6"
+                android:background="@drawable/line"
+                android:layout_marginTop="@dimen/dimens_11px"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

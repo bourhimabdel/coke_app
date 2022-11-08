@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="PxUsage"
+    android:layoutDirection="ltr">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/list_element_in_activity_account"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_750px"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        android:background="@color/background">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview1"
+            android:layout_width= "0dp"
+            app:layout_constraintWidth_percent="0.48"
+            android:layout_height="@dimen/dimens_690px"
+
+            app:cardCornerRadius="@dimen/dimens_45px"
+
+
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cardview2"
+            app:layout_constraintTop_toTopOf="parent"
+
+
+
+
+            app:cardPreventCornerOverlap="false"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.joooonho.SelectableRoundedImageView
+                    android:id="@+id/recipe_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintHeight_percent="0.8"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sriv_left_top_corner_radius="@dimen/dimens_45px"
+                    app:sriv_right_top_corner_radius="@dimen/dimens_45px"
+                    tools:layout_editor_absoluteX="0dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_start"
+                    android:layout_width="@dimen/dimens_85px"
+                    android:layout_height="@dimen/dimens_85px"
+                    android:background="@drawable/star"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+
+                    android:layout_marginTop="@dimen/dimens_32px"
+                    android:layout_marginStart="@dimen/dimens_32px"
+
+                    android:layout_marginLeft="@dimen/dimens_11px"
+
+                    android:visibility="invisible"
+                    />
+
+                <pl.pawelkleczkowski.customgauge.CustomGauge
+                    android:id="@+id/progressbar_rating"
+                    android:layout_width="@dimen/dimens_130px"
+                    android:layout_height="@dimen/dimens_130px"
+
+                    app:layout_constraintStart_toStartOf="@id/img_start"
+                    app:layout_constraintEnd_toEndOf="@id/img_start"
+                    app:layout_constraintTop_toTopOf="@id/img_start"
+                    app:layout_constraintBottom_toBottomOf="@id/img_start"
+
+
+
+                    app:gaugePointEndColor="#FFD000"
+                    app:gaugePointStartColor="#FFB811"
+                    app:gaugeStartAngle="270"
+                    app:gaugeStrokeCap="ROUND"
+                    app:gaugeStrokeColor="#1BFFB200"
+                    app:gaugeStrokeWidth="@dimen/dimens_18px"
+                    app:gaugeSweepAngle="360"
+
+
+                    android:visibility="invisible"
+                    app:gaugeEndValue="10"
+                    />
+
+                <TextView
+                    android:id="@+id/image_not_found"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="لاتوجد صورة"
+                    android:textColor="#857272"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_45px"
+                    app:layout_constraintBottom_toBottomOf="@id/recipe_photo"
+                    app:layout_constraintTop_toTopOf="@id/recipe_photo"
+                    android:visibility="invisible"
+                />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_load_r1"
+
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/load"
+
+                    android:layout_width= "0dp"
+                    app:layout_constraintWidth_percent="0.9"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/recipe_photo"
+                    app:layout_constraintEnd_toEndOf="@id/recipe_photo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/dimens_180px"
+                    app:layout_constraintVertical_bias="0"
+                    app:lottie_speed="2"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/background_title_recipet_not_corner"
+                    app:layout_constraintBottom_toBottomOf="@id/recipe_photo"
+                    app:layout_constraintHeight_percent="0.3" />
+
+               <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bottom_view_in_items_account"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="0.2" />
+                <TextView
+                    android:id="@+id/recipe_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_45px"
+                    app:layout_constraintBottom_toBottomOf="@id/recipe_photo"
+                    android:paddingBottom="@dimen/dimens_11px"
+                    android:paddingLeft="@dimen/dimens_11px"
+                    android:paddingRight="@dimen/dimens_11px"/>
+
+                <Button
+                    android:id="@+id/text_status"
+                    android:layout_width= "0dp"
+                    app:layout_constraintWidth_percent="0.49"
+                    android:layout_height="@dimen/dimens_130px"
+                    android:background="@drawable/back_status_ok"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    android:gravity="center"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:paddingRight="@dimen/dimens_11px"
+                    android:paddingLeft="@dimen/dimens_11px"
+                    android:paddingTop="@dimen/dimens_32px"
+                    android:textSize="@dimen/dimens_32px"
+                    android:textStyle="bold"
+
+                    android:drawableLeft="@drawable/edit"
+
+                    android:clickable="false"
+
+                    />
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width= "0dp"
+                    app:layout_constraintWidth_percent="0.49"
+                    android:layout_height="@dimen/dimens_130px"
+                    android:background="@drawable/back_date"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:gravity="center"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:paddingRight="@dimen/dimens_11px"
+                    android:paddingTop="@dimen/dimens_11px"
+                    android:paddingBottom="@dimen/dimens_11px"
+                    android:paddingLeft="@dimen/dimens_11px"
+                    android:textSize="@dimen/dimens_32px"
+                    android:textStyle="bold"
+                    />
+
+                <Button
+                    android:id="@+id/button_first_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/clique_items_layout_acount"
+                    />
+
+
+
+
+
+
+
+                <!-- Number of person and Munite -->
+              <!--  <View
+                    android:id="@+id/persson_number"
+                    android:layout_width= "0dp"
+                    app:layout_constraintWidth_percent="0.49"
+                    android:layout_height="@dimen/dimens_130px"
+                    android:background="@drawable/button_in_the_top_of_recipe"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+
+                    app:layout_constraintTop_toBottomOf="@id/recipe_photo"
+                 />
+
+                <ImageView
+                    android:id="@+id/puc_people"
+                    android:layout_width="@dimen/demens_65pex"
+                    android:layout_height="@dimen/demens_65pex"
+                    android:background="@drawable/people"
+                    app:layout_constraintBottom_toBottomOf="@id/persson_number"
+                    app:layout_constraintEnd_toEndOf="@id/persson_number"
+                    app:layout_constraintHorizontal_bias="0.9"
+                    app:layout_constraintStart_toStartOf="@id/persson_number"
+                    app:layout_constraintTop_toTopOf="@id/persson_number" />
+
+                <TextView
+                    android:id="@+id/text_people"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="3"
+                    android:text="5\nلمباري"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textSize="@dimen/dimens_32px"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/puc_people"
+                    app:layout_constraintEnd_toStartOf="@id/puc_people"
+                    app:layout_constraintStart_toStartOf="@id/persson_number"
+                    app:layout_constraintTop_toTopOf="@id/puc_people" />
+
+                <View
+                    android:id="@+id/time_coke"
+                    android:layout_width= "0dp"
+                    app:layout_constraintWidth_percent="0.49"
+                    android:layout_height="@dimen/dimens_130px"
+                    android:background="@drawable/button_in_the_top_of_recipe"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintEnd_toEndOf=  "parent"
+
+                    app:layout_constraintTop_toBottomOf="@id/recipe_photo" />
+
+                <ImageView
+                    android:id="@+id/puc_time"
+                    android:layout_width="@dimen/demens_65pex"
+                    android:layout_height="@dimen/demens_65pex"
+                    android:background="@drawable/time"
+                    app:layout_constraintBottom_toBottomOf="@id/time_coke"
+                    app:layout_constraintEnd_toEndOf="@id/time_coke"
+                    app:layout_constraintHorizontal_bias="0.9"
+                    app:layout_constraintStart_toStartOf="@id/time_coke"
+                    app:layout_constraintTop_toTopOf="@id/time_coke" />
+
+                <TextView
+                    android:id="@+id/text_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="3"
+                    android:text="5\nلمباري"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textSize="@dimen/dimens_32px"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/puc_time"
+                    app:layout_constraintEnd_toStartOf="@id/puc_time"
+                    app:layout_constraintStart_toStartOf="@id/time_coke"
+                    app:layout_constraintTop_toTopOf="@id/puc_time" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview2"
+            android:layout_width= "0dp"
+            app:layout_constraintWidth_percent="0.48"
+            android:layout_height="@dimen/dimens_690px"
+
+            app:cardCornerRadius="@dimen/dimens_45px"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/cardview1"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+
+            app:cardPreventCornerOverlap="false"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.joooonho.SelectableRoundedImageView
+                    android:id="@+id/recipe_photo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintHeight_percent="0.8"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sriv_left_top_corner_radius="@dimen/dimens_45px"
+                    app:sriv_right_top_corner_radius="@dimen/dimens_45px"
+                    tools:layout_editor_absoluteX="0dp"/>
+
+
+                <ImageView
+                    android:id="@+id/img_start2"
+                    android:layout_width="@dimen/dimens_85px"
+                    android:layout_height="@dimen/dimens_85px"
+                    android:background="@drawable/star"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+
+                    android:layout_marginTop="@dimen/dimens_32px"
+                    android:layout_marginEnd="@dimen/dimens_32px"
+
+                    android:layout_marginLeft="@dimen/dimens_11px"
+                    android:visibility="invisible"
+
+                    android:layout_marginRight="@dimen/dimens_32px" />
+
+                <pl.pawelkleczkowski.customgauge.CustomGauge
+                    android:id="@+id/progressbar_rating2"
+                    android:layout_width="@dimen/dimens_130px"
+                    android:layout_height="@dimen/dimens_130px"
+
+                    app:layout_constraintStart_toStartOf="@id/img_start2"
+                    app:layout_constraintEnd_toEndOf="@id/img_start2"
+                    app:layout_constraintTop_toTopOf="@id/img_start2"
+                    app:layout_constraintBottom_toBottomOf="@id/img_start2"
+
+
+
+                    app:gaugePointEndColor="#FFD000"
+                    app:gaugePointStartColor="#FFB811"
+                    app:gaugeStartAngle="270"
+                    app:gaugeStrokeCap="ROUND"
+                    app:gaugeStrokeColor="#1BFFB200"
+                    app:gaugeStrokeWidth="@dimen/dimens_18px"
+                    app:gaugeSweepAngle="360"
+
+                    android:visibility="invisible"
+
+
+                    app:gaugeEndValue="10"
+                    />
+
+                <TextView
+                    android:id="@+id/image_not_found2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="لاتوجد صورة"
+                    android:textColor="#857272"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_45px"
+                    app:layout_constraintBottom_toBottomOf="@id/recipe_photo2"
+                    app:layout_constraintTop_toTopOf="@id/recipe_photo2"
+                    android:visibility="invisible"
+                    />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_load_r2"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/load"
+
+                    android:layout_width= "0dp"
+                    app:layout_constraintWidth_percent="0.9"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/recipe_photo2"
+                    app:layout_constraintEnd_toEndOf="@id/recipe_photo2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/dimens_180px"
+                    app:layout_constraintVertical_bias="0"
+                    app:lottie_speed="2"
+                    />
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/background_title_recipet_not_corner"
+                    app:layout_constraintBottom_toBottomOf="@id/recipe_photo2"
+                    app:layout_constraintHeight_percent="0.3" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bottom_view_in_items_account"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="0.2" />
+
+                <TextView
+                    android:id="@+id/recipe_title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_45px"
+                    app:layout_constraintBottom_toBottomOf="@id/recipe_photo2"
+                    android:paddingBottom="@dimen/dimens_11px"
+                    android:paddingLeft="@dimen/dimens_11px"
+                    android:paddingRight="@dimen/dimens_11px"/>
+
+                <Button
+                    android:id="@+id/text_status2"
+                    android:layout_width= "0dp"
+                    app:layout_constraintWidth_percent="0.49"
+                    android:layout_height="@dimen/dimens_130px"
+                    android:background="@drawable/back_status_ok"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    android:gravity="center"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:paddingRight="@dimen/dimens_11px"
+                    android:paddingTop="@dimen/dimens_32px"
+                    android:textSize="@dimen/dimens_32px"
+                    android:textStyle="bold"
+
+                    android:drawableLeft="@drawable/edit"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_date2"
+                    android:layout_width= "0dp"
+                    app:layout_constraintWidth_percent="0.49"
+                    android:layout_height="@dimen/dimens_130px"
+                    android:background="@drawable/back_date"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:gravity="center"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:paddingRight="@dimen/dimens_11px"
+                    android:paddingTop="@dimen/dimens_11px"
+                    android:paddingBottom="@dimen/dimens_11px"
+                    android:paddingLeft="@dimen/dimens_11px"
+                    android:textSize="@dimen/dimens_32px"
+                    android:textStyle="bold"
+                    />
+
+
+                <Button
+                    android:id="@+id/button_second_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/clique_items_layout_acount"/>
+
+               <!-- <View
+                    android:id="@+id/persson_number2"
+                    android:layout_width= "0dp"
+                    app:layout_constraintWidth_percent="0.49"
+                    android:layout_height="@dimen/dimens_130px"
+                    android:background="@drawable/button_in_the_top_of_recipe"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recipe_photo2" />
+
+                <ImageView
+                    android:id="@+id/puc_people2"
+                    android:layout_width="@dimen/demens_65pex"
+                    android:layout_height="@dimen/demens_65pex"
+                    android:background="@drawable/people"
+                    app:layout_constraintBottom_toBottomOf="@id/persson_number2"
+                    app:layout_constraintEnd_toEndOf="@id/persson_number2"
+                    app:layout_constraintHorizontal_bias="0.9"
+                    app:layout_constraintStart_toStartOf="@id/persson_number2"
+                    app:layout_constraintTop_toTopOf="@id/persson_number2" />
+
+                <TextView
+
+                    android:id="@+id/text_people2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="3"
+                    android:text="5\nلمباري"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textSize="@dimen/dimens_32px"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/puc_people2"
+                    app:layout_constraintEnd_toStartOf="@id/puc_people2"
+                    app:layout_constraintStart_toStartOf="@id/persson_number2"
+                    app:layout_constraintTop_toTopOf="@id/puc_people2" />
+
+                <View
+                    android:id="@+id/time_coke2"
+                    android:layout_width= "0dp"
+                    app:layout_constraintWidth_percent="0.49"
+                    android:layout_height="@dimen/dimens_130px"
+                    android:background="@drawable/button_in_the_top_of_recipe"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recipe_photo2"/>
+
+                <ImageView
+                    android:id="@+id/puc_time2"
+                    android:layout_width="@dimen/demens_65pex"
+                    android:layout_height="@dimen/demens_65pex"
+                    android:background="@drawable/time"
+                    app:layout_constraintBottom_toBottomOf="@id/time_coke2"
+                    app:layout_constraintEnd_toEndOf="@id/time_coke2"
+                    app:layout_constraintHorizontal_bias="0.9"
+                    app:layout_constraintStart_toStartOf="@id/time_coke2"
+                    app:layout_constraintTop_toTopOf="@id/time_coke2" />
+
+                <TextView
+
+                    android:id="@+id/text_time2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="3"
+                    android:text="5\nلمباري"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textSize="@dimen/dimens_32px"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/puc_time2"
+                    app:layout_constraintEnd_toStartOf="@id/puc_time2"
+                    app:layout_constraintStart_toStartOf="@id/time_coke2"
+                    app:layout_constraintTop_toTopOf="@id/puc_time2" /> -->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

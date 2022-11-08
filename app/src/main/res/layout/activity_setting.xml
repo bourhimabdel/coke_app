@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".setting"
+    android:layoutDirection="ltr">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimens_70px"
+        android:paddingBottom="@dimen/dimens_220px"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintWidth_percent="0.45"
+
+            app:cardCornerRadius="@dimen/dimens_45px"
+            android:layout_margin="@dimen/demens_23px"
+
+            app:layout_constraintBottom_toTopOf="@id/cardview3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cardview2"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:cardPreventCornerOverlap="false"
+            android:background="@color/background"
+
+            >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/image_day_or_night"
+                android:layout_width="@dimen/dimens_220px"
+                android:layout_height="@dimen/dimens_220px"
+                android:layout_marginTop="@dimen/dimens_45px"
+                android:background="@drawable/day_or_night"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/text_day_or_night"
+                android:layout_marginBottom="@dimen/demens_23px"
+                />
+            <TextView
+                android:id="@+id/text_day_or_night"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/image_day_or_night"
+                app:layout_constraintBottom_toTopOf="@id/Switch_day_or_night"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="اخطر طرق"
+                android:textSize="@dimen/dimens_55px"
+                android:textStyle="bold"
+                android:textColor="@color/color_text_login_and_cadre"
+                />
+            <TextView
+                android:id="@+id/text_small_day_or_night"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/Switch_day_or_night"
+                app:layout_constraintBottom_toBottomOf="@id/Switch_day_or_night"
+                app:layout_constraintStart_toEndOf="@id/Switch_day_or_night"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="اخطر طرق"
+                android:textSize="@dimen/dimens_45px"
+                android:textStyle="normal"
+                android:textColor="@color/color_text_login_and_cadre"
+                />
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/Switch_day_or_night"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/text_day_or_night"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/text_small_day_or_night"
+                android:layout_marginTop="@dimen/dimens_70px"
+                android:layout_marginBottom="@dimen/dimens_45px"
+                android:textOff="ghh"
+                android:textOn="gvvv"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimens_70px"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintWidth_percent="0.45"
+
+            app:cardCornerRadius="@dimen/dimens_45px"
+            android:layout_margin="@dimen/demens_23px"
+
+            app:layout_constraintBottom_toTopOf="@id/cardview4"
+            app:layout_constraintLeft_toRightOf="@id/cardview1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cardview1"
+            app:layout_constraintHorizontal_bias="0"
+
+            app:cardPreventCornerOverlap="false"
+            android:background="@color/background"
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/image_number"
+                    android:layout_width="@dimen/dimens_220px"
+                    android:layout_height="@dimen/dimens_220px"
+                    android:layout_marginTop="@dimen/dimens_45px"
+                    android:background="@drawable/number_arab_or_other"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/text_number"
+                    android:layout_marginBottom="@dimen/demens_23px"
+                    />
+                <TextView
+                    android:id="@+id/text_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/image_number"
+                    app:layout_constraintBottom_toTopOf="@id/Switch_number"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="اخطر طرق"
+                    android:textSize="@dimen/dimens_55px"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    />
+                <TextView
+                    android:id="@+id/text_small_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/Switch_number"
+                    app:layout_constraintBottom_toBottomOf="@id/Switch_number"
+                    app:layout_constraintStart_toEndOf="@id/Switch_number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="اخطر طرق"
+                    android:textSize="@dimen/dimens_45px"
+                    android:textStyle="normal"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    />
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/Switch_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/text_number"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/text_small_number"
+                    android:layout_marginTop="@dimen/dimens_70px"
+                    android:layout_marginBottom="@dimen/dimens_45px"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintWidth_percent="0.45"
+
+            app:cardCornerRadius="@dimen/dimens_45px"
+            android:layout_margin="@dimen/demens_23px"
+
+            app:layout_constraintBottom_toTopOf="@id/cardview5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cardview4"
+            app:layout_constraintTop_toBottomOf="@id/cardview1"
+
+            app:cardPreventCornerOverlap="false"
+            android:background="@color/background"
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/image_text"
+                    android:layout_width="@dimen/dimens_220px"
+                    android:layout_height="@dimen/dimens_220px"
+                    android:layout_marginTop="@dimen/dimens_45px"
+                    android:background="@drawable/text_fonts"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/text_text"
+                    android:layout_marginBottom="@dimen/demens_23px"
+                    />
+                <TextView
+                    android:id="@+id/text_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/image_text"
+                    app:layout_constraintBottom_toTopOf="@id/spinner_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="اخطر طرق"
+                    android:textSize="@dimen/dimens_55px"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    />
+                <TextView
+                    android:id="@+id/text_small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/spinner_text"
+                    app:layout_constraintBottom_toBottomOf="@id/spinner_text"
+                    app:layout_constraintStart_toEndOf="@id/spinner_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="اخطر طرق"
+                    android:textSize="@dimen/dimens_45px"
+                    android:textStyle="normal"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    />
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinner_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/text_text"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/text_small_text"
+                    android:layout_marginTop="@dimen/dimens_70px"
+                    android:layout_marginBottom="@dimen/dimens_45px"
+                    android:background="@drawable/back_itemx_accuil"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintWidth_percent="0.45"
+
+            app:cardCornerRadius="@dimen/dimens_45px"
+            android:layout_margin="@dimen/demens_23px"
+
+            app:layout_constraintBottom_toTopOf="@id/cardview6"
+            app:layout_constraintLeft_toRightOf="@id/cardview3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview2"
+
+            app:cardPreventCornerOverlap="false"
+            android:background="@color/background"
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/image_notif"
+                    android:layout_width="@dimen/dimens_220px"
+                    android:layout_height="@dimen/dimens_220px"
+                    android:layout_marginTop="@dimen/dimens_45px"
+                    android:background="@drawable/notifications"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/text_notif"
+                    android:layout_marginBottom="@dimen/demens_23px"
+                    />
+                <TextView
+                    android:id="@+id/text_notif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/image_notif"
+                    app:layout_constraintBottom_toTopOf="@id/spinner_notif"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="اشعارات التحميل"
+                    android:textSize="@dimen/dimens_55px"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    />
+                <TextView
+                    android:id="@+id/text_small_notif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/spinner_notif"
+                    app:layout_constraintBottom_toBottomOf="@id/spinner_notif"
+                    app:layout_constraintStart_toEndOf="@id/spinner_notif"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="اخطر طرق"
+                    android:textSize="@dimen/dimens_45px"
+                    android:textStyle="normal"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    />
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/spinner_notif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/text_notif"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/text_small_notif"
+                    android:layout_marginTop="@dimen/dimens_70px"
+                    android:layout_marginBottom="@dimen/dimens_45px"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintWidth_percent="0.45"
+
+            app:cardCornerRadius="@dimen/dimens_45px"
+            android:layout_margin="@dimen/demens_23px"
+
+            app:layout_constraintBottom_toTopOf="@id/cardview7"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cardview6"
+            app:layout_constraintTop_toBottomOf="@id/cardview3"
+
+            app:cardPreventCornerOverlap="false"
+            android:background="@color/background"
+
+
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/image_bottom_bar"
+                    android:layout_width="@dimen/dimens_220px"
+                    android:layout_height="@dimen/dimens_220px"
+                    android:layout_marginTop="@dimen/dimens_45px"
+                    android:background="@drawable/bottom_bar_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/text_bottom_bar"
+                    android:layout_marginBottom="@dimen/demens_23px"
+                    />
+                <TextView
+                    android:id="@+id/text_bottom_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/image_bottom_bar"
+                    app:layout_constraintBottom_toTopOf="@id/spinner_bottom_bar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="شريط التنقل السفلي"
+                    android:textSize="@dimen/dimens_55px"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    />
+                <TextView
+                    android:id="@+id/text_small_bottom_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/spinner_bottom_bar"
+                    app:layout_constraintBottom_toBottomOf="@id/spinner_bottom_bar"
+                    app:layout_constraintStart_toEndOf="@id/spinner_bottom_bar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="اخطر طرق"
+                    android:textSize="@dimen/dimens_45px"
+                    android:textStyle="normal"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    />
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/spinner_bottom_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/text_bottom_bar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/text_small_bottom_bar"
+                    android:layout_marginTop="@dimen/dimens_70px"
+                    android:layout_marginBottom="@dimen/dimens_45px"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintWidth_percent="0.45"
+
+            app:cardCornerRadius="@dimen/dimens_45px"
+            android:layout_margin="@dimen/demens_23px"
+
+            app:layout_constraintLeft_toRightOf="@id/cardview5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview4"
+            app:layout_constraintBottom_toTopOf="@id/cardview7"
+
+            android:layout_marginTop="@dimen/dimens_45px"
+
+            app:cardPreventCornerOverlap="false"
+            android:background="@color/background"
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/image_rate"
+                    android:layout_width="@dimen/dimens_300px"
+                    android:layout_height="@dimen/dimens_300px"
+                    android:layout_marginTop="@dimen/dimens_45px"
+                    android:background="@drawable/logo_rate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/text_rate"
+                    android:layout_marginBottom="@dimen/demens_23px"
+                    />
+                <TextView
+                    android:id="@+id/text_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/image_rate"
+                    app:layout_constraintBottom_toTopOf="@id/btn_rate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="رأيك يهمنا"
+                    android:textSize="@dimen/dimens_55px"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:layout_marginBottom="@dimen/dimens_55px"
+                    />
+          <Button
+              android:id="@+id/btn_rate"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/text_rate"
+              android:background="@drawable/btn_selector_rate_us"
+              android:text="قيمنا"
+              android:textColor="@color/color_text_login_and_cadre"
+              android:textStyle="bold"
+              android:textSize="@dimen/dimens_45px"
+              android:drawableTop="@drawable/star"
+              />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintWidth_percent="0.45"
+
+            app:cardCornerRadius="@dimen/dimens_45px"
+            android:layout_margin="@dimen/demens_23px"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cardview9"
+            app:layout_constraintTop_toBottomOf="@id/cardview6"
+
+            app:cardPreventCornerOverlap="false"
+            android:background="@color/background"
+
+
+
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/image_share"
+                    android:layout_width="@dimen/dimens_220px"
+                    android:layout_height="@dimen/dimens_220px"
+                    android:layout_marginTop="@dimen/dimens_45px"
+                    android:background="@drawable/ic_logo_social_media"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/text_share"
+                    android:layout_marginBottom="@dimen/demens_23px"
+                    />
+                <TextView
+                    android:id="@+id/text_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/image_share"
+                    app:layout_constraintBottom_toTopOf="@id/btn_share"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="شارك مع اصدقائك"
+                    android:textSize="@dimen/dimens_55px"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:layout_marginBottom="@dimen/dimens_55px"
+                    />
+
+                <Button
+                    android:id="@+id/btn_share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_selector_share"
+                    android:drawableTop="@drawable/share"
+                    android:text="شاركا"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textSize="@dimen/dimens_45px"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_share"
+                    tools:layout_editor_absoluteX="0dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintWidth_percent="0.9"
+
+            app:cardCornerRadius="@dimen/dimens_45px"
+
+
+           app:layout_constraintRight_toRightOf="parent"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview9"
+
+            app:cardPreventCornerOverlap="false"
+            android:background="@color/background"
+
+            android:layout_marginTop="@dimen/dimen_100_px"
+
+
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <Button
+                    android:id="@+id/btn_Log_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_selector_google"
+                    android:paddingRight="@dimen/dimens_130px"
+                    android:paddingLeft="@dimen/dimens_130px"
+                    android:paddingTop="@dimen/dimens_55px"
+                    android:paddingBottom="@dimen/dimens_55px"
+                    android:text="تسجيل الخروج"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textSize="@dimen/dimens_55px"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/log_out"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="right|center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:drawableLeft="@drawable/log_out" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintWidth_percent="0.46"
+
+            app:cardCornerRadius="@dimen/dimens_45px"
+
+            android:layout_marginTop="@dimen/dimen_100_px"
+            android:layout_marginLeft="@dimen/demens_23px"
+            android:layout_marginRight="@dimen/dimens_45px"
+
+            app:layout_constraintRight_toRightOf="parent"
+
+
+            app:layout_constraintLeft_toRightOf="@id/cardview7"
+            app:layout_constraintTop_toBottomOf="@id/cardview6"
+
+            app:cardPreventCornerOverlap="false"
+            android:background="@color/background"
+
+
+
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <com.joooonho.SelectableRoundedImageView
+                    android:id="@+id/image_profil"
+                    android:layout_width="@dimen/dimens_220px"
+                    android:layout_height="@dimen/dimens_220px"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/name_profile"
+                    android:layout_marginTop="@dimen/dimens_45px"
+                    app:sriv_oval="true"
+                    />
+
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_load_image"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/load"
+
+                    android:layout_width="@dimen/dimens_250px"
+                    android:layout_height="@dimen/dimens_250px"
+                    app:layout_constraintStart_toStartOf="@id/image_profil"
+                    app:layout_constraintEnd_toEndOf="@id/image_profil"
+                    app:layout_constraintTop_toTopOf="@id/image_profil"
+                    app:layout_constraintBottom_toBottomOf="@id/image_profil"
+                    app:lottie_speed="2"
+                    />
+
+                <TextView
+                    android:id="@+id/name_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="الاسم الكامل"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_45px"
+                    app:layout_constraintEnd_toEndOf="@id/text_bio"
+                    app:layout_constraintStart_toStartOf="@id/text_bio"
+                    app:layout_constraintTop_toBottomOf="@id/image_profil"
+                    app:layout_constraintBottom_toTopOf="@id/text_bio"
+                    android:layout_marginTop="@dimen/demens_23px"/>
+
+                <TextView
+                    android:id="@+id/text_bio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/image_profil"
+                    app:layout_constraintEnd_toEndOf="@id/image_profil"
+                    app:layout_constraintTop_toBottomOf="@id/name_profile"
+                    app:layout_constraintBottom_toTopOf="@id/btn_edit_info_userr"
+                    android:hint="صف نفسك ، واكتب معلومات اضافية تريد الاخرين ان يتعرفو عليها ."
+                    android:gravity="center"
+                    android:textColor="@color/color_text_petit"
+                    android:paddingBottom="@dimen/dimens_5px"
+                    android:paddingTop="@dimen/dimens_5px"
+                    android:layout_marginTop="@dimen/dimens_5px"
+                    />
+                <Button
+                    android:id="@+id/btn_edit_info_userr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_selector_share"
+                    android:drawableTop="@drawable/edit"
+                    android:text="تحديث"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textSize="@dimen/dimens_45px"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                 />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+    <color name="background">#FFFFFF</color>
+    <color name="background_card">#E1D9D9</color>
+    <color name="background_snack">#B3B3B3</color>
+    <color name="background_n">#00EDEDED</color>
+    <color name="clique_items_account">#C3EDEDED</color>
+    <color name="background_clique">#B8B3B3</color>
+    <color name="color_text_login_and_cadre">#272727</color>
+    <color name="color_text_petit">#3C3A3A</color>
+
+    <color name="background_transparent">#4Dffffff</color>
+
+    <color name="tit">#9A3C3A3A</color>
+    <color name="color_button_login">#03A9F4</color>
+    <color name="color_button_login_clique">#126C95</color>
+    <color name="text_items">#F8F5F5</color>
+    <color name="color_button_top">#D6D6D6</color>
+
+    <color name="color_bottom_bar_accaunt">#00E5FF</color>
+
+    <color name="color_bio_back">#F0E6E2E2</color>
+
+    <color name="btr">#9BAC02</color>
+
+    <color name="green">#76FF03</color>
+    <color name="green_start">#7976FF03</color>
+    <color name="red">#FF003B</color>
+
+    <color name="gr1">#F7D3CFCF</color>
+    <color name="gr2">#B0D3CFCF</color>
+    <color name="gr3">#00D3CFCF</color>
+    <color name="gr4">#97D3CFCF</color>
+
+    <color name="btn_add">#5AA3EC</color>
+    <color name="btn_add_C">#345F8A</color>
+    <color name="btn_cancel">#E16D6D</color>
+    <color name="btn_cancel_C">#B14D4D</color>
+
+    <color name="a1">#930808</color>
+    <color name="a2">#B18C15</color>
+    <color name="a3">#1B9E29</color>
+
+    <color name="ref">#BEFF0000</color>
+    <color name="att">#BEFFC300</color>
+    <color name="ok">#BE74FF00</color>
+    <color name="not_co">#BE5FFFB1</color>
+    <color name="date">#FF5576</color>
+
+
+    <color name="c">#71BC32</color>
+    <color name="v">#D53434</color>
+    <color name="b">#348E98</color>
+
+    <color name="c_start">#FDCE2E</color>
+
+    <color name="splash">#272727</color>
+
+    <color name="c_view_p_t">#C0CA33</color>
+
+
+    <color name="p">#FF774D</color>
+    <color name="t">#C6FB4B</color>
+    <color name="d">#47FFFF</color>
+
+
+    <color name="oval_search">#A3FDD835</color>
+    <color name="oval_search_c">#FDD835</color>
+
+    <color name="oval_account">#AE14C57E</color>
+    <color name="oval_account_c">#14C57E</color>
+
+    <color name="oval_delet">#8BFF0000</color>
+    <color name="oval_delet_c">#FF0000</color>
+
+    <color name="rate_us">#B0FFEC1E</color>
+    <color name="rate_us_clic">#FFEC1E</color>
+
+    <color name="share">#B007E18A</color>
+    <color name="share_clic">#07E18A</color>
+
+    <color name="selecto">#0C6E43</color>
+    <color name="othro">#BE0C6E43</color>
+
+    <color name="fb_color">#3b5998</color>
+    <color name="fb_color_c">#8b9dc3</color>
+
+    <color name="google_color">#dd4b39</color>
+    <color name="google_color_c">#913028</color>
+
+    <color name="notification_accepted">#3CC557</color>
+    <color name="notification_refuse">#E83838</color>
+    <color name="notification_upload">#21AEED</color>
+    <color name="notification_comment">#ECE118</color>
+
+    <color name="oval_delet_Long">#8B23818C</color>
+</resources>

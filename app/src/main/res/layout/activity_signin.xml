@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".signin"
+    android:layoutDirection="ltr">
+
+    <ImageView
+        android:id="@+id/img_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo_with_circle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/progressbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        />
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="@dimen/dimens_550px"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/demens_23px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_signin"
+        android:text=" تفضل(ي) بتسجيل دخولك معنا , واستمتع(ي) بعالم مليء بوصفات الطبخ ."
+        android:gravity="center"
+        android:textColor="@color/color_text_login_and_cadre"
+        android:textStyle="bold"
+        android:background="@drawable/back_itemx_accuil"
+        android:lineSpacingExtra="@dimen/dimens_5px"
+
+       />
+
+
+
+    <Button
+        android:id="@+id/fb_log"
+        android:layout_width="@dimen/dimens_850px"
+        android:layout_height="@dimen/dimens_180px"
+        android:background="@drawable/btn_selector_fb"
+        android:text="تسجيل الدخول عبر فايسبوك"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        android:textColor="#E1E1E6"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_logo_fb"
+        android:drawableStart="@drawable/ic_logo_fb"
+        android:gravity="center_vertical|right"
+        android:padding="@dimen/dimens_55px"
+        android:textSize="@dimen/dimens_45px"/>
+    <Button
+        android:id="@+id/google_log"
+        android:layout_width="@dimen/dimens_850px"
+        android:layout_height="@dimen/dimens_180px"
+        android:background="@drawable/btn_selector_google"
+        android:text="تسجيل الدخول عبر جوجل"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fb_log"
+        android:layout_marginBottom="@dimen/dimens_55px"
+        android:textColor="#E6E1E1"
+        android:drawableLeft="@drawable/ic_logo_google"
+        android:drawableStart="@drawable/ic_logo_google"
+        android:textStyle="bold"
+        android:gravity="center_vertical|right"
+        android:padding="@dimen/dimens_55px"
+        android:textSize="@dimen/dimens_45px"/>
+
+    <TextView
+        android:id="@+id/sign"
+        android:layout_width="@dimen/dimens_850px"
+        android:layout_height="@dimen/dimens_180px"
+        android:text="يتم تسجيل الدخول ..."
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        android:textColor="@color/color_text_login_and_cadre"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimens_55px"
+        android:gravity="center"
+        android:visibility="invisible"/>
+
+
+    <pl.pawelkleczkowski.customgauge.CustomGauge
+        android:id="@+id/progressbar"
+        android:layout_width="@dimen/dimens_420px"
+        android:layout_height="@dimen/dimens_420px"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        app:layout_constraintBottom_toTopOf="@id/sign"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+
+
+        app:gaugePointEndColor="#FB3434"
+        app:gaugePointStartColor="#FF0404"
+        app:gaugeStartAngle="270"
+        app:gaugeStrokeCap="ROUND"
+        app:gaugeStrokeColor="@color/color_text_login_and_cadre"
+        app:gaugeStrokeWidth="10dp"
+        app:gaugeSweepAngle="360"
+
+        android:visibility="invisible"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_download"
+        app:lottie_rawRes="@raw/add_succes"
+
+        android:layout_width="@dimen/dimens_420px"
+        android:layout_height="@dimen/dimens_420px"
+        app:layout_constraintStart_toStartOf="@id/progressbar"
+        app:layout_constraintEnd_toEndOf="@id/progressbar"
+        app:layout_constraintTop_toTopOf="@id/progressbar"
+        app:layout_constraintBottom_toBottomOf="@id/progressbar"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/pourcentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/lottie_download"
+        app:layout_constraintEnd_toEndOf="@id/lottie_download"
+        app:layout_constraintTop_toTopOf="@id/lottie_download"
+        app:layout_constraintBottom_toBottomOf="@id/lottie_download"
+        android:text="100"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimens_55px"
+        android:textColor="@color/color_text_login_and_cadre"
+        android:visibility="invisible"
+        />
+    <TextView
+        android:id="@+id/pourcent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/pourcentage"
+        app:layout_constraintBottom_toBottomOf="@id/pourcentage"
+        android:text="%"
+        android:textStyle="italic"
+        android:textSize="@dimen/dimens_32px"
+        android:textColor="@color/color_text_login_and_cadre"
+        android:visibility="invisible"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/principal_layout"
+    android:layoutDirection="ltr"
+    tools:context=".praincipal_activity"
+    tools:targetApi="jelly_bean_mr1">
+
+
+
+    <!-- <fragment
+         android:id="@+id/fragment_main_activity"
+         android:name="com.cokeappingo.MainActivity"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"/>
+     <fragment
+         android:id="@+id/fragment_main_activity"
+         android:name="com.cokeappingo.MainActivity"
+         android:layout_width="match_parent"
+         android:layout_height="match_paren
+     <fragment
+         android:id="@+id/fragment_main_activity"
+         android:name="com.cokeappingo.MainActivity"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"/>
+    <fragment
+        android:id="@+id/fragment_main_activity"
+        android:name="com.cokeappingo.MainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <fragment
+        android:id="@+id/fragment_main_activity"
+        android:name="com.cokeappingo.account_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer_accueil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_height_view_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/place_top_bar"
+        android:background="@drawable/back_snack_bar_top"
+        >
+
+        <ImageButton
+            android:id="@+id/button_2"
+            android:layout_width= "@dimen/dimens_85px"
+            android:layout_height="@dimen/dimens_85px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_5"
+            android:background="@drawable/btn_selector_button_bottom_bat"
+            android:src="@drawable/settings"
+            android:scaleType="centerCrop"
+            />
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width= "@dimen/dimens_2px"
+            android:layout_height="@dimen/dimens_70px"
+            app:layout_constraintEnd_toStartOf="@id/button_5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_1"
+            android:background="@color/color_text_login_and_cadre"
+
+            />
+        <ImageButton
+            android:id="@+id/button_4"
+            android:layout_width= "@dimen/dimens_85px"
+            android:layout_height="@dimen/dimens_85px"
+            app:layout_constraintEnd_toStartOf="@id/view_4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_3"
+            android:src="@drawable/save"
+            android:background="@drawable/btn_selector_button_bottom_bat"
+            android:scaleType="centerCrop"
+            />
+        <View
+            android:id="@+id/view_3"
+            android:layout_width= "@dimen/dimens_2px"
+            android:layout_height="@dimen/dimens_70px"
+            app:layout_constraintEnd_toStartOf="@id/button_4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_5"
+            android:background="@color/color_text_login_and_cadre"
+
+            />
+        <ImageButton
+            android:id="@+id/button_5"
+            android:layout_width= "@dimen/dimens_85px"
+            android:layout_height="@dimen/dimens_85px"
+            app:layout_constraintEnd_toStartOf="@id/view_3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_2"
+            android:src="@drawable/search"
+            android:background="@drawable/btn_selector_button_bottom_bat"
+            android:scaleType="centerCrop"
+            />
+        <View
+            android:id="@+id/view_4"
+            android:layout_width= "@dimen/dimens_2px"
+            android:layout_height="@dimen/dimens_70px"
+            app:layout_constraintEnd_toStartOf="@id/button_6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_4"
+            android:background="@color/color_text_login_and_cadre"
+            />
+        <ImageButton
+            android:id="@+id/button_6"
+            android:layout_width= "@dimen/dimens_85px"
+            android:layout_height="@dimen/dimens_85px"
+            app:layout_constraintEnd_toStartOf="@id/view_5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/view_4"
+            android:src="@drawable/account"
+            android:background="@drawable/btn_selector_button_bottom_bat"
+            android:layout_marginLeft="@dimen/demens_23px"
+            android:scaleType="centerCrop"
+            />
+        <View
+            android:id="@+id/view_5"
+            android:layout_width= "@dimen/dimens_2px"
+            android:layout_height="@dimen/dimens_70px"
+            app:layout_constraintEnd_toStartOf="@id/button_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_6"
+            android:background="@color/color_text_login_and_cadre"
+            />
+        <ImageButton
+            android:id="@+id/button_1"
+            android:layout_width= "@dimen/dimens_130px"
+            android:layout_height="@dimen/dimens_130px"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/view_2"
+            android:src="@drawable/home"
+            android:background="@drawable/btn_selector_button_bottom_bat"
+            android:scaleType="centerCrop"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/text_ad"
+        android:layout_width="@dimen/dimens_70px"
+        android:layout_height="@dimen/dimens_70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintVertical_bias="0.01"
+        android:background="@drawable/add_coming"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/color_text_login_and_cadre"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimens_45px"
+        android:visibility="invisible"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

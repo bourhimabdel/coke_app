@@ -1,0 +1,83 @@
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_snack_bar"
+    android:layoutDirection="ltr">
+
+    <View
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0.001dp"
+        android:layout_height="@dimen/dimens_460px"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <View
+        android:id="@+id/cancel_line"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_height="@dimen/dimens_18px"
+        android:background="@drawable/line_b_clique"
+        app:layout_constraintBottom_toTopOf="@id/n"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        />
+
+    <TextView
+        android:id="@+id/n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الرجاء الاختيار"
+        app:layout_constraintBottom_toTopOf="@id/btn_add_o"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/dimens_55px"
+        android:textStyle="bold"
+        android:textColor="@color/color_text_login_and_cadre"
+        />
+    <Button
+        android:id="@+id/btn_add_o"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_height="@dimen/dimens_180px"
+
+
+        app:layout_constraintStart_toEndOf="@id/btn_cancel_o"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/dimens_70px"
+        android:layout_marginBottom="@dimen/dimens_45px"
+
+        android:background="@drawable/btn_selector_rate_us"
+        android:gravity="right|center_vertical"
+        android:textColor="@color/color_text_login_and_cadre"
+        android:text="اكمل لاحقا"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimens_45px"
+        android:paddingRight="@dimen/dimens_70px"
+        android:paddingLeft="@dimen/dimens_70px"
+        android:drawableLeft="@drawable/history"
+
+        />
+
+    <ImageButton
+        android:id="@+id/btn_cancel_o"
+        android:layout_width="@dimen/dimens_130px"
+        android:layout_height="@dimen/dimens_130px"
+        android:background="@drawable/btn_selector_delet"
+        android:src="@drawable/cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_add_o"
+        app:layout_constraintEnd_toStartOf="@id/btn_add_o"
+        app:layout_constraintBottom_toBottomOf="@id/btn_add_o"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

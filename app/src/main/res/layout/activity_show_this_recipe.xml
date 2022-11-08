@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".show_this_recipe"
+    android:layoutDirection="ltr">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nesto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scrollbars="vertical"
+        android:visibility="invisible"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dimens_250px">
+
+            <com.joooonho.SelectableRoundedImageView
+                android:id="@+id/image_image_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+
+                app:sriv_left_bottom_corner_radius="@dimen/dimens_45px"
+                app:sriv_right_bottom_corner_radius="@dimen/dimens_45px"
+
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="PxUsage"
+                />
+
+
+            <TextView
+            android:id="@+id/text_title_recipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dimens_180px"
+            app:layout_constraintBottom_toBottomOf="@id/image_image_recipe"
+
+            android:text="النوم بسهولة وربما نام بسهولة"
+            android:textColor="@color/color_text_login_and_cadre"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimens_55px"
+            android:gravity="right|bottom"
+
+            android:paddingRight="@dimen/dimens_32px"
+            android:background="@drawable/background_text_recipe"
+            />
+
+            <TextView
+                android:id="@+id/text_descriprtion_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dimens_180px"
+                app:layout_constraintTop_toBottomOf="@id/text_title_recipe"
+                android:lineSpacingExtra="@dimen/dimens_11px"
+
+                android:text="تلك الليلة لم يستطع أحدهم النوم بسهولة وربما نام بسهولة أكبر !!! كان يعاني.. كان يشعر بالحرمان وهو يدق مسماراً طويلاً في جذور اطمئنانه وسلامه، لقد شعر بالحقيقة وهي تبدل جلدها في داخله عندما رأى رفيق الدراسة – الذي كان أقل منه كثيراً في الموهبة والذكاء – وهو يشغل الطبقة العليا من المجتمع، يشع ثراء وغباءً في ذات الوقت"
+                android:textColor="@color/color_text_login_and_cadre"
+                android:textStyle="normal"
+                android:textSize="@dimen/dimens_45px"
+                android:gravity="right|center_vertical"
+
+                android:padding="@dimen/dimens_32px"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_ingredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/text_descriprtion_recipe"
+                android:background="@drawable/back_itemx_accuil"
+                android:minHeight="@dimen/dimens_220px"
+                android:layout_marginRight="@dimen/dimens_32px"
+                android:layout_marginLeft="@dimen/dimens_32px"
+                >
+
+                <ImageButton
+                    android:id="@+id/list_vertical"
+                    android:layout_width="@dimen/dimens_130px"
+                    android:layout_height="@dimen/dimens_130px"
+                    app:layout_constraintTop_toBottomOf="@id/list_ingredients"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/dimens_5px"
+                    android:background="@drawable/btn_selector_oval_search"
+                    android:src="@drawable/row_more"
+
+                    />
+                <TextView
+                    android:id="@+id/title_ingredient_recipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/demens_23px"
+                    android:layout_marginRight="@dimen/dimens_32px"
+
+                    app:layout_constraintVertical_bias="0.24"
+                    android:text="مكونات الوصفة :"
+                    android:textColor="@color/color_text_petit"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_45px"
+                    />
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_height="@dimen/dimens_2px"
+                    android:background="@color/color_text_petit"
+                    app:layout_constraintTop_toBottomOf="@id/title_ingredient_recipe"
+                    app:layout_constraintStart_toStartOf="@id/title_ingredient_recipe"
+                    app:layout_constraintEnd_toEndOf="@id/title_ingredient_recipe"
+                    android:layout_width="0dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_ingredients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/line"
+                    app:layout_constraintBottom_toTopOf="@id/list_vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/demens_23px"
+                    android:layout_marginBottom="@dimen/demens_23px"
+                    android:scrollbars="horizontal"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_how_to_prepare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/view_ingredient"
+                android:layout_marginTop="@dimen/dimens_32px"
+                android:background="@drawable/back_itemx_accuil"
+                android:minHeight="@dimen/dimens_220px"
+                android:layout_marginRight="@dimen/dimens_32px"
+                android:layout_marginLeft="@dimen/dimens_32px"
+                >
+
+                <ImageButton
+                    android:id="@+id/list_vertical_prepare"
+                    android:layout_width="@dimen/dimens_130px"
+                    android:layout_height="@dimen/dimens_130px"
+                    app:layout_constraintTop_toBottomOf="@id/list_prepare"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/dimens_5px"
+                    android:background="@drawable/btn_selector_oval_search"
+                    android:src="@drawable/row_more"
+                    />
+                <TextView
+                    android:id="@+id/title_prepare_recipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/demens_23px"
+                    android:layout_marginRight="@dimen/dimens_32px"
+
+                    app:layout_constraintVertical_bias="0.24"
+                    android:text="خطوات اعداد الوصفة :"
+                    android:textColor="@color/color_text_petit"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_45px"
+                    />
+
+                <View
+                    android:id="@+id/line_prepare"
+                    android:layout_height="@dimen/dimens_2px"
+                    android:background="@color/color_text_petit"
+                    app:layout_constraintTop_toBottomOf="@id/title_prepare_recipe"
+                    app:layout_constraintStart_toStartOf="@id/title_prepare_recipe"
+                    app:layout_constraintEnd_toEndOf="@id/title_prepare_recipe"
+                    android:layout_width="0dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_prepare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/line_prepare"
+                    app:layout_constraintBottom_toTopOf="@id/list_vertical_prepare"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/demens_23px"
+                    android:layout_marginBottom="@dimen/demens_23px"
+                    android:scrollbars="horizontal"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_commentaire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/line_bottom_prepare"
+                android:layout_marginTop="@dimen/dimens_32px"
+                android:background="@drawable/back_itemx_accuil"
+                android:minHeight="@dimen/dimens_220px"
+                android:layout_marginRight="@dimen/dimens_32px"
+                android:layout_marginLeft="@dimen/dimens_32px"
+                >
+
+                <ImageButton
+                    android:id="@+id/list_vertical_commentaire"
+                    android:layout_width="@dimen/dimens_130px"
+                    android:layout_height="@dimen/dimens_130px"
+                    app:layout_constraintTop_toBottomOf="@id/list_commentaire"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/dimens_5px"
+                    android:background="@drawable/btn_selector_yellow_oval"
+                    android:src="@drawable/row_more"
+
+                    />
+                <TextView
+                    android:id="@+id/title_commentaire_recipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/demens_23px"
+                    android:layout_marginRight="@dimen/dimens_32px"
+
+                    app:layout_constraintVertical_bias="0.24"
+                    android:text="تعليقات :"
+                    android:textColor="@color/color_text_petit"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_45px"
+                    />
+
+                <View
+                    android:id="@+id/line_commentaire"
+                    android:layout_height="@dimen/dimens_2px"
+                    android:background="@color/color_text_petit"
+                    app:layout_constraintTop_toBottomOf="@id/title_commentaire_recipe"
+                    app:layout_constraintStart_toStartOf="@id/title_commentaire_recipe"
+                    app:layout_constraintEnd_toEndOf="@id/title_commentaire_recipe"
+                    android:layout_width="0dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_commentaire"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/line_commentaire"
+                    app:layout_constraintBottom_toTopOf="@id/list_vertical_commentaire"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/demens_23px"
+                    android:layout_marginBottom="@dimen/demens_23px"
+                    />
+
+                <TextView
+                    android:id="@+id/no_commentaire_recipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toBottomOf="@id/line_commentaire"
+                    app:layout_constraintBottom_toTopOf="@id/list_vertical_commentaire"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/demens_23px"
+                    android:layout_marginBottom="@dimen/demens_23px"
+
+                    android:text="لا توجد اي تعليقات"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_55px"
+                    android:visibility="invisible"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/line_bottom_prepare"
+                android:layout_height="@dimen/dimens_2px"
+                android:background="@color/color_text_petit"
+                app:layout_constraintTop_toBottomOf="@id/view_info_plus"
+                app:layout_constraintStart_toStartOf="@id/view_how_to_prepare"
+                app:layout_constraintEnd_toEndOf="@id/view_how_to_prepare"
+                android:layout_marginTop="@dimen/dimens_130px"
+                android:layout_width="0dp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_info_plus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/view_how_to_prepare"
+                android:background="@drawable/back_itemx_accuil"
+                android:minHeight="@dimen/dimens_220px"
+                android:layout_marginRight="@dimen/dimens_32px"
+                android:layout_marginLeft="@dimen/dimens_32px"
+                android:layout_marginTop="@dimen/dimens_32px"
+                >
+
+
+
+                <Button
+                    android:id="@+id/button_person"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.45"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_45px"
+                    android:background="@drawable/rate_us"
+
+                    android:clickable="false"
+                    android:gravity="center"
+
+                    android:drawableBottom="@drawable/people"
+                    android:padding="@dimen/dimens_32px"
+
+                    android:text="100 دقيقة دقيقة دقيقة دقيقة"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textSize="@dimen/dimens_45px"
+                    android:textStyle="bold"
+
+                    app:layout_constraintStart_toEndOf="@id/button_time"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/dimens_32px"
+                    />
+
+
+                <Button
+                    android:id="@+id/button_time"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.45"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_share"
+
+                    android:clickable="false"
+                    android:gravity="center"
+
+                    android:drawableBottom="@drawable/time"
+                    android:padding="@dimen/dimens_32px"
+
+                    android:text="100 دقيقة دقيقة دقيقة دقيقة"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textSize="@dimen/dimens_45px"
+                    android:textStyle="bold"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/button_person"
+                    app:layout_constraintTop_toTopOf="@id/button_person"
+                    app:layout_constraintBottom_toBottomOf="@id/button_person"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_rating"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/dimens_32px"
+                android:layout_marginLeft="@dimen/dimens_32px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_32px"
+                android:background="@drawable/back_itemx_accuil"
+                android:minHeight="@dimen/dimens_220px"
+                app:layout_constraintTop_toBottomOf="@id/view_commentaire"
+
+                tools:layout_editor_absoluteX="10dp">
+
+                <TextView
+                    android:id="@+id/title_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/demens_23px"
+                    android:layout_marginRight="@dimen/dimens_32px"
+                    android:text="اعط تقييم للوصفة :"
+                    android:textColor="@color/color_text_petit"
+
+                    android:textSize="@dimen/dimens_45px"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.24" />
+
+                <View
+                    android:id="@+id/line_rating"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimens_2px"
+                    android:background="@color/color_text_petit"
+                    app:layout_constraintEnd_toEndOf="@id/title_rating"
+                    app:layout_constraintStart_toStartOf="@id/title_rating"
+                    app:layout_constraintTop_toBottomOf="@id/title_rating" />
+
+
+                <ImageButton
+                    android:id="@+id/start1"
+                    android:layout_width="@dimen/dimens_130px"
+                    android:layout_height="@dimen/dimens_130px"
+                    android:layout_marginTop="@dimen/dimens_32px"
+                    android:layout_marginBottom="@dimen/dimens_32px"
+                    android:background="@drawable/selector_star"
+                    app:layout_constraintBottom_toTopOf="@id/input_commentaire"
+                    app:layout_constraintEnd_toStartOf="@id/start2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line_rating" />
+
+                <ImageButton
+                    android:id="@+id/start2"
+                    android:layout_width="@dimen/dimens_130px"
+                    android:layout_height="@dimen/dimens_130px"
+                    android:background="@drawable/selector_star"
+                    app:layout_constraintBottom_toBottomOf="@id/start1"
+                    app:layout_constraintEnd_toStartOf="@id/start3"
+                    app:layout_constraintStart_toEndOf="@id/start1"
+                    app:layout_constraintTop_toTopOf="@id/start1" />
+
+
+                <ImageButton
+                    android:id="@+id/start3"
+                    android:layout_width="@dimen/dimens_130px"
+                    android:layout_height="@dimen/dimens_130px"
+                    android:background="@drawable/selector_star"
+                    app:layout_constraintBottom_toBottomOf="@id/start1"
+                    app:layout_constraintEnd_toStartOf="@id/start4"
+                    app:layout_constraintStart_toEndOf="@id/start2"
+                    app:layout_constraintTop_toTopOf="@id/start1" />
+
+                <ImageButton
+                    android:id="@+id/start4"
+                    android:layout_width="@dimen/dimens_130px"
+                    android:layout_height="@dimen/dimens_130px"
+                    android:background="@drawable/selector_star"
+                    app:layout_constraintBottom_toBottomOf="@id/start1"
+                    app:layout_constraintEnd_toStartOf="@id/start5"
+                    app:layout_constraintStart_toEndOf="@id/start3"
+                    app:layout_constraintTop_toTopOf="@id/start1" />
+
+                <ImageButton
+                    android:id="@+id/start5"
+                    android:layout_width="@dimen/dimens_130px"
+                    android:layout_height="@dimen/dimens_130px"
+                    android:background="@drawable/selector_star"
+                    app:layout_constraintBottom_toBottomOf="@id/start1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/start4"
+                    app:layout_constraintTop_toTopOf="@id/start1" />
+
+                <EditText
+                    android:id="@+id/input_commentaire"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_45px"
+                    android:layout_marginBottom="@dimen/dimens_32px"
+
+                    android:background="@drawable/edit_text_before_write"
+                    android:gravity="right|center_vertical"
+                    android:hint="ما رأيك(ي) في هاته الوصفة ؟ (اختياري)"
+                    android:inputType="textMultiLine"
+                    android:minHeight="@dimen/dimens_70px"
+                    android:paddingLeft="@dimen/dimens_55px"
+
+                    android:paddingTop="@dimen/dimens_70px"
+                    android:paddingRight="@dimen/dimens_55px"
+
+
+                    android:paddingBottom="@dimen/dimens_45px"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textSize="@dimen/dimens_45px"
+                    android:visibility="gone"
+
+                    app:layout_constraintBottom_toTopOf="@id/button_share_comm"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@id/start1"
+                    app:layout_constraintWidth_percent="0.9" />
+
+                <Button
+                    android:id="@+id/button_share_comm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_45px"
+                    android:layout_marginBottom="@dimen/dimens_32px"
+                    android:background="@drawable/btn_selector_rate_us"
+
+                    android:gravity="center"
+                    android:padding="@dimen/dimens_32px"
+
+                    android:text="حفظ التقييم"
+                    android:textColor="@color/color_text_login_and_cadre"
+                    android:textSize="@dimen/dimens_45px"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/input_commentaire"
+
+                    app:layout_constraintWidth_percent="0.9" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <View
+                android:id="@+id/line_bottom_comentaire"
+                android:layout_height="@dimen/dimens_2px"
+                android:background="@color/color_text_petit"
+                app:layout_constraintTop_toBottomOf="@id/view_rating"
+                app:layout_constraintStart_toStartOf="@id/view_how_to_prepare"
+                app:layout_constraintEnd_toEndOf="@id/view_how_to_prepare"
+                android:layout_marginTop="@dimen/dimens_130px"
+                android:layout_width="0dp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/line_bottom_comentaire"
+                android:layout_marginTop="@dimen/dimens_32px"
+                android:background="@drawable/back_itemx_accuil"
+                android:minHeight="@dimen/dimens_220px"
+                android:layout_marginRight="@dimen/dimens_32px"
+                android:layout_marginLeft="@dimen/dimens_32px"
+                >
+
+                <TextView
+                    android:id="@+id/title_profile_recipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/demens_23px"
+                    android:layout_marginRight="@dimen/dimens_32px"
+
+                    app:layout_constraintVertical_bias="0.24"
+                    android:text="ناشر(ة) الوصفة :"
+                    android:textColor="@color/color_text_petit"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_45px"
+                    />
+
+                <View
+                    android:id="@+id/line_profile"
+                    android:layout_height="@dimen/dimens_2px"
+                    android:background="@color/color_text_petit"
+                    app:layout_constraintTop_toBottomOf="@id/title_profile_recipe"
+                    app:layout_constraintStart_toStartOf="@id/title_profile_recipe"
+                    app:layout_constraintEnd_toEndOf="@id/title_profile_recipe"
+                    android:layout_width="0dp" />
+
+                <com.joooonho.SelectableRoundedImageView
+                    android:id="@+id/image_profil"
+                    android:layout_width="@dimen/dimens_220px"
+                    android:layout_height="@dimen/dimens_220px"
+                    app:layout_constraintTop_toBottomOf="@id/line_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/dimens_45px"
+                    app:sriv_oval="true"
+                    />
+                <TextView
+                    android:id="@+id/name_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toBottomOf="@id/image_profil"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="@dimen/dimens_11px"
+
+                    android:text="ناشر(ة)"
+                    android:textColor="@color/color_text_petit"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimens_45px"
+                    />
+
+                <TextView
+                    android:id="@+id/description_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:lineSpacingExtra="@dimen/dimens_11px"
+                    android:maxWidth="@dimen/dimens_690px"
+                    app:layout_constraintTop_toBottomOf="@id/name_profile"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="@dimen/dimens_11px"
+
+                    android:text="لحقيقة وهي تبدل جلدها في داخله عندما رأى رفيق الدراسة – الذي كان أقل منه كثيراً في الموهبة والذكاء – وهو يشغل الطبقة العليا من المجتمع، يشع ثراء وغباءً في ذا"
+                    android:textColor="@color/color_text_petit"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/dimens_32px"
+                    android:layout_marginBottom="@dimen/dimens_32px"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/button_date"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.8"
+                android:layout_height="wrap_content"
+
+                android:clickable="false"
+                android:gravity="center"
+
+                android:padding="@dimen/dimens_32px"
+
+
+                android:textColor="@color/color_text_petit"
+                android:textSize="@dimen/dimens_45px"
+                android:textStyle="bold"
+
+                android:layout_marginTop="@dimen/dimens_32px"
+                android:layout_marginBottom="@dimen/dimens_11px"
+
+                android:lineSpacingExtra="@dimen/dimens_11px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_profile"
+                app:layout_constraintBottom_toTopOf="@id/adView_show"
+                />
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/adView_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/button_date"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <ImageButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="@dimen/dimens_180px"
+        android:layout_height="@dimen/dimens_180px"
+        android:background="@drawable/btn_selector_back"
+        android:src="@drawable/go_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.75"
+        android:rotation="180"
+        />
+
+
+    <ImageButton
+        android:id="@+id/btn_save_recipe"
+        android:layout_width="@dimen/dimens_180px"
+        android:layout_height="@dimen/dimens_180px"
+        android:background="@drawable/btn_selector_save"
+        android:src="@drawable/bookmark_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       android:visibility="invisible"
+        />
+    <ImageButton
+        android:id="@+id/btn_share"
+        android:layout_width="@dimen/dimens_180px"
+        android:layout_height="@dimen/dimens_180px"
+        android:background="@drawable/btn_selector_save"
+        android:src="@drawable/share"
+        app:layout_constraintStart_toEndOf="@id/btn_save_recipe"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/demens_23px"
+        android:visibility="invisible"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_download_data"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/load"
+        app:lottie_speed="1"
+
+        android:layout_width="@dimen/dimens_690px"
+        android:layout_height="@dimen/dimens_690px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.42"
+
+        android:visibility="visible"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recipe_not_found"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        >
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_no_serch_result"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/no_search_result"
+            app:lottie_speed="0.5"
+
+            android:layout_width="@dimen/dimens_690px"
+            android:layout_height="@dimen/dimens_690px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.42"
+
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:id="@+id/text_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="نعتذر لقد تم مسح هاته الوصفة"
+            android:textColor="@color/color_text_petit"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimens_45px"
+            app:layout_constraintEnd_toEndOf="@id/lottie_no_serch_result"
+            app:layout_constraintStart_toStartOf="@id/lottie_no_serch_result"
+            app:layout_constraintTop_toBottomOf="@id/lottie_no_serch_result"
+            android:layout_marginBottom="@dimen/dim_height_view_top"
+            android:layout_marginTop="@dimen/dimens_70px"
+            android:visibility="visible"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

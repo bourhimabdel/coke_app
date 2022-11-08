@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="PxUsage">
+
+
+    <dimen name="dimen_100_px">133.33px</dimen>
+    <dimen name="dim_widght_view_top">226.8px</dimen>
+    <dimen name="dim_height_view_top">213.6px</dimen>
+    <dimen name="dimen_330px">440px</dimen>
+    <dimen name="dimens_180px">240px</dimen>
+    <dimen name="dimens_750px">1000px</dimen>
+    <dimen name="dimens_420px">560px</dimen>
+    <dimen name="dimens_97px">129.33px</dimen>
+    <dimen name="dimens_85px">113.33px</dimen>
+    <dimen name="dimens_2px">2.66px</dimen>
+    <dimen name="dimens_70px">93.33px</dimen>
+
+    <dimen name="dimens_15px">53.33px</dimen>
+    <dimen name="dimens_18px">24px</dimen>
+    <dimen name="dimens_487">649.33px</dimen>
+    <dimen name="dimens_250px">333.33px</dimen>
+    <dimen name="dimens_55px">73.33px</dimen>
+    <dimen name="dimens_11px">14.66px</dimen>
+    <dimen name="dimens_490px">653.33px</dimen>
+    <dimen name="demens_23px">30.66px</dimen>
+    <dimen name="demens_65pex">86.66px</dimen>
+
+    <dimen name="dimens_300px">400px</dimen>
+    <dimen name="dimens_850px">1133.33px</dimen>
+    <dimen name="dimens_220px">293.33px</dimen>
+    <dimen name="dimens_130px">173.33px</dimen>
+    <dimen name="dimens_32px">42.66px</dimen>
+    <dimen name="dimens_720px">960px</dimen>
+    <dimen name="dimens_460px">613.33px</dimen>
+    <dimen name="dimens_690px">920.33px</dimen>
+    <dimen name="dimens_5px">6.67px</dimen>
+    <dimen name="dimens_550px">733.33px</dimen>
+</resources>
